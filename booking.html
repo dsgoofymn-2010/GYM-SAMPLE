@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<!-- =================================================================
+     Mr Thunder Gym — booking.html
+     FRONTEND ONLY: the form validates in the browser and never sends
+     data to a server. WhatsApp confirm uses a placeholder number from
+     js/main.js SITE_CONFIG.whatsappNumber.
+     PHASE 2A: Hallmark restyle; all ids, field names and hooks unchanged.
+     ================================================================= -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Book a Session | Mr Thunder Gym Virudhunagar</title>
+  <meta name="description" content="Lock your slot online: group classes, personal training, diet plans or a free trial at Mr Thunder Gym, Virudhunagar. Confirmed at the desk." />
+  <!-- TODO LAUNCH: see README "Before launch" — placeholder domain. -->
+  <link rel="canonical" href="https://www.mrthundergym.example/booking.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Mr Thunder Gym" />
+  <meta property="og:locale" content="en_IN" />
+  <meta property="og:title" content="Book a Session | Mr Thunder Gym Virudhunagar" />
+  <meta property="og:description" content="Lock your slot online: group classes, personal training, diet plans or a free trial at Mr Thunder Gym, Virudhunagar. Confirmed at the desk." />
+  <meta property="og:url" content="https://www.mrthundergym.example/booking.html" />
+  <meta property="og:image" content="https://www.mrthundergym.example/assets/social/og-image.svg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="The Thunder Gym bolt mark on the electric near-black stage" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Book a Session | Mr Thunder Gym Virudhunagar" />
+  <meta name="twitter:description" content="Lock your slot online: group classes, personal training, diet plans or a free trial at Mr Thunder Gym, Virudhunagar. Confirmed at the desk." />
+  <meta name="twitter:image" content="https://www.mrthundergym.example/assets/social/og-image.svg" />
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600&amp;family=Fjalla+One&amp;display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="js/main.js" defer></script>
+  <script src="js/booking.js" defer></script>
+  <script src="js/motion.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- =============== SHARED HEADER (identical on every page) =============== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <svg class="brand-bolt" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M13 2 4 14h6l-1 8 11-13h-6z" /></svg>
+        <a class="logo" href="index.html" data-config="logoText">THUNDER GYM</a>
+      </div>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation">
+        <span class="nav-toggle-bar" aria-hidden="true"></span>
+        <span class="nav-toggle-bar" aria-hidden="true"></span>
+        <span class="nav-toggle-bar" aria-hidden="true"></span>
+      </button>
+
+      <nav class="site-nav" id="site-nav" aria-label="Main">
+        <ul class="nav-list">
+          <li><a class="nav-link" href="index.html">Home</a></li>
+          <li><a class="nav-link" href="facilities.html">Facilities</a></li>
+          <li><a class="nav-link" href="achievements.html">Achievements</a></li>
+          <li><a class="nav-link" href="booking.html">Booking</a></li>
+          <li><a class="nav-link" href="about.html">About Us</a></li>
+        </ul>
+        <a class="btn btn-sm" href="booking.html">Book Now</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="section section-tail">
+      <div class="container">
+        <header class="page-head">
+          <h1>Book a Session</h1>
+          <!-- PLACEHOLDER: intro copy -->
+          <p class="section-lead">
+            Pick your service, date and time slot. The gym team will confirm
+            your booking at the front desk.
+          </p>
+        </header>
+
+        <div class="booking-layout">
+          <!-- ================= FORM + SUCCESS (frontend only) ================= -->
+          <div class="booking-main">
+            <!-- FRONTEND ONLY: submission stays in the browser. -->
+            <form id="booking-form" class="booking-form" novalidate>
+              <div class="field">
+                <label for="booking-name">Full name <span class="required" aria-hidden="true">*</span></label>
+                <input type="text" id="booking-name" name="name" autocomplete="name" required
+                  aria-describedby="error-name" />
+                <p class="field-error" id="error-name" aria-live="polite"></p>
+              </div>
+
+              <div class="field">
+                <label for="booking-phone">Phone <span class="required" aria-hidden="true">*</span></label>
+                <input type="tel" id="booking-phone" name="phone" inputmode="numeric" autocomplete="tel" required
+                  aria-describedby="hint-phone error-phone" />
+                <p class="field-hint" id="hint-phone">10-digit mobile number.</p>
+                <p class="field-error" id="error-phone" aria-live="polite"></p>
+              </div>
+
+              <div class="field field-wide">
+                <label for="booking-email">Email <span class="required" aria-hidden="true">*</span></label>
+                <input type="email" id="booking-email" name="email" autocomplete="email" required
+                  aria-describedby="error-email" />
+                <p class="field-error" id="error-email" aria-live="polite"></p>
+              </div>
+
+              <div class="field">
+                <label for="booking-service">Service type <span class="required" aria-hidden="true">*</span></label>
+                <select id="booking-service" name="service" required aria-describedby="error-service">
+                  <option value="">Select a service</option>
+                  <!-- PLACEHOLDER: service list & pricing copy -->
+                  <option value="Group Class">Group Class</option>
+                  <option value="Personal Training">Personal Training</option>
+                  <option value="Diet Plan">Diet Plan</option>
+                  <option value="Free Trial">Free Trial</option>
+                </select>
+                <p class="field-error" id="error-service" aria-live="polite"></p>
+              </div>
+
+              <div class="field">
+                <label for="booking-date">Preferred date <span class="required" aria-hidden="true">*</span></label>
+                <input type="date" id="booking-date" name="date" required
+                  aria-describedby="error-date" />
+                <p class="field-error" id="error-date" aria-live="polite"></p>
+              </div>
+
+              <div class="field field-wide">
+                <label for="booking-slot">Preferred time slot <span class="required" aria-hidden="true">*</span></label>
+                <select id="booking-slot" name="slot" required aria-describedby="error-slot">
+                  <option value="">Select a time slot</option>
+                  <!-- PLACEHOLDER: time slots; aligned to the posted working
+                       hours, adjust when the gym confirms real batches -->
+                  <option value="Early morning, 5:00 to 7:00 AM">Early morning, 5:00 to 7:00 AM</option>
+                  <option value="Morning, 7:00 to 9:30 AM">Morning, 7:00 to 9:30 AM</option>
+                  <option value="Evening, 5:00 to 7:00 PM">Evening, 5:00 to 7:00 PM</option>
+                  <option value="Night, 7:00 to 9:00 PM">Night, 7:00 to 9:00 PM</option>
+                </select>
+                <p class="field-error" id="error-slot" aria-live="polite"></p>
+              </div>
+
+              <div class="field field-wide">
+                <label for="booking-message">Message (optional)</label>
+                <textarea id="booking-message" name="message" rows="4"></textarea>
+              </div>
+
+              <div class="form-actions field-wide">
+                <button type="submit" class="btn">Submit Booking</button>
+              </div>
+            </form>
+
+            <!-- ================= SUCCESS PANEL ================= -->
+            <!-- Shown by js/booking.js after a valid submit (frontend only). -->
+            <section id="booking-success" class="booking-success" hidden aria-labelledby="booking-success-title">
+              <h2 id="booking-success-title" tabindex="-1">Your details, ready for the desk</h2>
+              <!-- PLACEHOLDER: success copy -->
+              <p class="booking-copy">
+                This page has no server yet, so nothing was sent or stored.
+                Show these details at the front desk, or confirm on WhatsApp
+                below.
+              </p>
+
+              <dl id="booking-summary" class="summary-list"></dl>
+
+              <div class="form-actions">
+                <!-- WhatsApp link (href) is built by js/booking.js using
+                     SITE_CONFIG.whatsappNumber (placeholder number). -->
+                <a id="whatsapp-confirm" class="btn" href="#" target="_blank" rel="noopener noreferrer">
+                  Confirm on WhatsApp
+                </a>
+                <button id="book-another" type="button" class="btn btn-ghost">Book another</button>
+              </div>
+            </section>
+          </div>
+
+          <!-- ================= SIDEBAR ================= -->
+          <aside class="booking-side" aria-label="Gym information">
+            <dl class="facts">
+              <div class="fact">
+                <dt>Opening Hours</dt>
+                <!-- PLACEHOLDER: hours (js/main.js refreshes from SITE_CONFIG) -->
+                <dd class="pre-line" data-config="hours">Mon-Sat: 5:00 AM to 9:30 AM &amp; 5:00 PM to 9:00 PM.
+Sunday: 6:00 AM to 9:00 AM.</dd>
+              </div>
+
+              <div class="fact">
+                <dt>Address</dt>
+                <!-- PLACEHOLDER: contact details (refreshed from SITE_CONFIG) -->
+                <dd class="pre-line" data-config="address">12, Annaikarai Street, Near Bus Stand,
+Virudhunagar, Tamil Nadu 626001</dd>
+              </div>
+
+              <div class="fact">
+                <dt>Phone</dt>
+                <dd><a class="footer-link" data-config="phone" href="tel:9876543210">98765 43210</a></dd>
+              </div>
+
+              <div class="fact">
+                <dt>Email</dt>
+                <dd><a class="footer-link" data-config="email" href="mailto:info@mrthundergym.in">info@mrthundergym.in</a></dd>
+              </div>
+            </dl>
+
+            <!-- PLACEHOLDER: booking notes copy -->
+            <p class="note">
+              Walk-ins are welcome during working hours. Free trial sessions
+              depend on slot availability.
+            </p>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =============== SHARED FOOTER (identical on every page) ===============
+       Static fallback text mirrors js/main.js SITE_CONFIG; main.js
+       refreshes these values from the config on every page load.
+       =================================================================== -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-col-brand">
+        <!-- PLACEHOLDER: gym blurb -->
+        <p class="footer-name" data-config="name">Mr Thunder Gym</p>
+        <p class="footer-tagline" data-config="tagline">Train loud. Lift stronger.</p>
+        <ul class="social-row" data-social-links aria-label="Social media">
+          <!-- Placeholder links rendered by js/main.js from SITE_CONFIG -->
+        </ul>
+      </div>
+
+      <div class="footer-col-links">
+        <h2 class="footer-head">Quick Links</h2>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="facilities.html">Facilities</a></li>
+          <li><a href="achievements.html">Achievements</a></li>
+          <li><a href="booking.html">Book a Session</a></li>
+          <li><a href="about.html">About Us</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col-contact">
+        <h2 class="footer-head">Contact</h2>
+        <address class="footer-addr pre-line" data-config="address">12, Annaikarai Street, Near Bus Stand,
+Virudhunagar, Tamil Nadu 626001</address>
+        <p><a class="footer-link" data-config="phone" href="tel:9876543210">98765 43210</a></p>
+        <p><a class="footer-link" data-config="email" href="mailto:info@mrthundergym.in">info@mrthundergym.in</a></p>
+      </div>
+
+      <div class="footer-col-hours">
+        <h2 class="footer-head">Working Hours</h2>
+        <p class="footer-hours pre-line">Mon-Sat: 5:00 AM to 9:30 AM &amp; 5:00 PM to 9:00 PM.
+Sunday: 6:00 AM to 9:00 AM.</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; <span id="footer-year"></span> Mr Thunder Gym, Virudhunagar.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

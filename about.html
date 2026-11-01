@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<!-- =================================================================
+     Mr Thunder Gym — about.html
+     PHASE 2A: Hallmark restyle. Contact facts refresh from SITE_CONFIG
+     via data-config; trainer names/roles/bios are carried placeholder
+     content (no portraits: rows are text-led). All hooks unchanged.
+     ================================================================= -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About Mr Thunder Gym | Story &amp; Coaches in Virudhunagar</title>
+  <meta name="description" content="The story, mission and coaching team behind Mr Thunder Gym near the Virudhunagar bus stand: serious equipment, honest training, every level welcome." />
+  <!-- TODO LAUNCH: see README "Before launch" — placeholder domain. -->
+  <link rel="canonical" href="https://www.mrthundergym.example/about.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Mr Thunder Gym" />
+  <meta property="og:locale" content="en_IN" />
+  <meta property="og:title" content="About Mr Thunder Gym | Story &amp; Coaches in Virudhunagar" />
+  <meta property="og:description" content="The story, mission and coaching team behind Mr Thunder Gym near the Virudhunagar bus stand: serious equipment, honest training, every level welcome." />
+  <meta property="og:url" content="https://www.mrthundergym.example/about.html" />
+  <meta property="og:image" content="https://www.mrthundergym.example/assets/social/og-image.svg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="The Thunder Gym bolt mark on the electric near-black stage" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="About Mr Thunder Gym | Story &amp; Coaches in Virudhunagar" />
+  <meta name="twitter:description" content="The story, mission and coaching team behind Mr Thunder Gym near the Virudhunagar bus stand: serious equipment, honest training, every level welcome." />
+  <meta name="twitter:image" content="https://www.mrthundergym.example/assets/social/og-image.svg" />
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600&amp;family=Fjalla+One&amp;display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="js/main.js" defer></script>
+  <script src="js/motion.js" defer></script>
+  <!-- TODO LAUNCH: JSON-LD values mirror js/main.js SITE_CONFIG; phone,
+       email and url are PLACEHOLDERS until the gym confirms real data. -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HealthClub",
+    "@id": "https://www.mrthundergym.example/#gym",
+    "name": "Mr Thunder Gym",
+    "url": "https://www.mrthundergym.example/",
+    "telephone": "+91-98765-43210",
+    "email": "info@mrthundergym.in",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "12, Annaikarai Street, Near Bus Stand",
+      "addressLocality": "Virudhunagar",
+      "addressRegion": "Tamil Nadu",
+      "postalCode": "626001",
+      "addressCountry": "IN"
+    },
+    "openingHoursSpecification": [
+      { "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+        "opens": "05:00", "closes": "09:30" },
+      { "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+        "opens": "17:00", "closes": "21:00" },
+      { "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Sunday",
+        "opens": "06:00", "closes": "09:00" }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- =============== SHARED HEADER (identical on every page) =============== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <svg class="brand-bolt" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M13 2 4 14h6l-1 8 11-13h-6z" /></svg>
+        <a class="logo" href="index.html" data-config="logoText">THUNDER GYM</a>
+      </div>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation">
+        <span class="nav-toggle-bar" aria-hidden="true"></span>
+        <span class="nav-toggle-bar" aria-hidden="true"></span>
+        <span class="nav-toggle-bar" aria-hidden="true"></span>
+      </button>
+
+      <nav class="site-nav" id="site-nav" aria-label="Main">
+        <ul class="nav-list">
+          <li><a class="nav-link" href="index.html">Home</a></li>
+          <li><a class="nav-link" href="facilities.html">Facilities</a></li>
+          <li><a class="nav-link" href="achievements.html">Achievements</a></li>
+          <li><a class="nav-link" href="booking.html">Booking</a></li>
+          <li><a class="nav-link" href="about.html">About Us</a></li>
+        </ul>
+        <a class="btn btn-sm" href="booking.html">Book Now</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- =============== STORY =============== -->
+    <section class="section section-tail" id="story" aria-labelledby="story-title">
+      <div class="container">
+        <h1 id="story-title">The gym by the bus stand</h1>
+        <!-- PLACEHOLDER: story copy, replace with the real gym history -->
+        <p>
+          Mr Thunder Gym started with a simple idea: give Virudhunagar a
+          serious, no-nonsense gym where anyone, from a first-timer to a
+          stage competitor, can train with proper guidance.
+        </p>
+        <p>
+          Today it is home to strength athletes, working professionals and
+          students who show up, train loud and keep getting stronger.
+        </p>
+      </div>
+    </section>
+
+    <!-- =============== MISSION & VISION =============== -->
+    <section class="section" id="mission" aria-labelledby="mission-title">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="mission-title">Mission &amp; Vision</h2>
+          <!-- PLACEHOLDER: mission/vision copy -->
+        </div>
+        <dl class="mission">
+          <div>
+            <dt>Our Mission</dt>
+            <!-- PLACEHOLDER: mission copy -->
+            <dd>
+              Make quality coaching and honest training accessible to every
+              person who walks through the door.
+            </dd>
+          </div>
+          <div>
+            <dt>Our Vision</dt>
+            <dd>
+              Be the gym Virudhunagar trusts for strength, fitness and
+              long-term health, one member at a time.
+            </dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- =============== TEAM (PLACEHOLDER ROWS) =============== -->
+    <section class="section" id="trainers" aria-labelledby="trainers-title">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="trainers-title">Coaches on the Floor</h2>
+          <!-- PLACEHOLDER: trainers intro copy; names/roles/bios below are samples -->
+          <p class="section-lead">Certified coaches who count your reps like they own them.</p>
+          <p class="note">Names, roles and bios are sample text until the owner confirms them.</p>
+        </div>
+
+        <ul class="rows">
+          <li>
+            <h3>R. Selvakumar</h3>
+            <div class="row-body">
+              <!-- PLACEHOLDER: trainer role and bio -->
+              <p class="row-role">Head Coach</p>
+              <p class="row-line">15+ years of coaching experience across strength sports and general fitness.</p>
+            </div>
+          </li>
+
+          <li>
+            <h3>M. Priya</h3>
+            <div class="row-body">
+              <!-- PLACEHOLDER: trainer role and bio -->
+              <p class="row-role">Personal Trainer</p>
+              <p class="row-line">Specialises in women&rsquo;s fitness, weight management and beginner strength.</p>
+            </div>
+          </li>
+
+          <li>
+            <h3>S. Arun</h3>
+            <div class="row-body">
+              <!-- PLACEHOLDER: trainer role and bio -->
+              <p class="row-role">Diet &amp; Nutrition Coach</p>
+              <p class="row-line">Builds simple, local, sustainable meal plans that match your training.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- =============== VISIT US =============== -->
+    <section class="section section-tail" id="visit" aria-labelledby="visit-title">
+      <div class="container visit">
+        <div class="visit-info">
+          <h2 id="visit-title">Visit Us</h2>
+          <!-- PLACEHOLDER: visit copy (values refresh from SITE_CONFIG) -->
+          <p class="pre-line" data-config="hours">Mon-Sat: 5:00 AM to 9:30 AM &amp; 5:00 PM to 9:00 PM. Sunday: 6:00 AM to 9:00 AM.</p>
+          <address class="pre-line" data-config="address">12, Annaikarai Street, Near Bus Stand,
+Virudhunagar, Tamil Nadu 626001</address>
+          <p>
+            Phone:
+            <a class="footer-link" data-config="phone" href="tel:9876543210">98765 43210</a>
+          </p>
+          <p>
+            Email:
+            <a class="footer-link" data-config="email" href="mailto:info@mrthundergym.in">info@mrthundergym.in</a>
+          </p>
+          <div class="form-actions">
+            <a class="btn" href="booking.html">Book a Session</a>
+            <a class="btn btn-ghost" href="facilities.html">See Facilities</a>
+          </div>
+        </div>
+
+        <figure class="visit-media">
+          <!-- Named data-slot: a real gym photo replaces this placeholder. -->
+          <div class="tile-frame" data-slot="visit-floor">
+            <img src="assets/images/about-story.svg"
+              alt="The training floor at Mr Thunder Gym (placeholder image)"
+              width="800" height="600" loading="lazy" />
+          </div>
+          <!-- PLACEHOLDER: visit media caption -->
+          <figcaption class="tile-cap">The training floor, near the bus stand</figcaption>
+        </figure>
+      </div>
+    </section>
+  </main>
+
+  <!-- =============== SHARED FOOTER (identical on every page) ===============
+       Static fallback text mirrors js/main.js SITE_CONFIG; main.js
+       refreshes these values from the config on every page load.
+       =================================================================== -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-col-brand">
+        <!-- PLACEHOLDER: gym blurb -->
+        <p class="footer-name" data-config="name">Mr Thunder Gym</p>
+        <p class="footer-tagline" data-config="tagline">Train loud. Lift stronger.</p>
+        <ul class="social-row" data-social-links aria-label="Social media">
+          <!-- Placeholder links rendered by js/main.js from SITE_CONFIG -->
+        </ul>
+      </div>
+
+      <div class="footer-col-links">
+        <h2 class="footer-head">Quick Links</h2>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="facilities.html">Facilities</a></li>
+          <li><a href="achievements.html">Achievements</a></li>
+          <li><a href="booking.html">Book a Session</a></li>
+          <li><a href="about.html">About Us</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col-contact">
+        <h2 class="footer-head">Contact</h2>
+        <address class="footer-addr pre-line" data-config="address">12, Annaikarai Street, Near Bus Stand,
+Virudhunagar, Tamil Nadu 626001</address>
+        <p><a class="footer-link" data-config="phone" href="tel:9876543210">98765 43210</a></p>
+        <p><a class="footer-link" data-config="email" href="mailto:info@mrthundergym.in">info@mrthundergym.in</a></p>
+      </div>
+
+      <div class="footer-col-hours">
+        <h2 class="footer-head">Working Hours</h2>
+        <p class="footer-hours pre-line">Mon-Sat: 5:00 AM to 9:30 AM &amp; 5:00 PM to 9:00 PM.
+Sunday: 6:00 AM to 9:00 AM.</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; <span id="footer-year"></span> Mr Thunder Gym, Virudhunagar.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

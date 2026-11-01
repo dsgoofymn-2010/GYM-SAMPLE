@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600" role="img" aria-label="Trainer 1" data-alt="Trainer 1">
+  <rect width="800" height="600" fill="#191710"/>
+  <path d="M13 2 4 14h6l-1 8 11-13h-6z" transform="translate(400 -140) scale(44)" fill="#ffd02a" opacity="0.05"/>
+  <rect x="14" y="14" width="772" height="572" fill="none" stroke="#4a472f" stroke-width="2"/>
+  <path d="M13 2 4 14h6l-1 8 11-13h-6z" transform="translate(256 156) scale(12)" fill="#ffd02a"/>
+</svg>

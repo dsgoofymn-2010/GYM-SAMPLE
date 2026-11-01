@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ==================================================================
+     Mr Thunder Gym - social sharing image (og:image / twitter:image)
+     1200 x 630. Palette + type mirror tokens.css (oklch values
+     converted to sRGB): paper #110f09, paper-2 #1c1b14, rule #3d3b32,
+     accent #f6ce00, ink #f1efe4. Fonts fall back to system faces
+     because crawlers neither load webfonts nor animate SVG.
+     TODO LAUNCH: most crawlers need a raster; export a PNG copy
+     (same size) and update the og/twitter:image URLs. Placeholder
+     domain: see README "Before launch".
+     ================================================================== -->
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Mr Thunder Gym: Train loud. Lift stronger. Virudhunagar.">
+  <!-- stage: near-black ground, hairline frame -->
+  <rect width="1200" height="630" fill="#110f09"/>
+  <rect x="24" y="24" width="1152" height="582" fill="none" stroke="#3d3b32" stroke-width="2"/>
+
+  <!-- soft accent glow behind the bolt -->
+  <defs>
+    <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#f6ce00" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#f6ce00" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <circle cx="600" cy="300" r="240" fill="url(#glow)"/>
+
+  <!-- the bolt mark (same path as the site's SVG bolt) -->
+  <g transform="translate(600 300) scale(16) translate(-12 -12)">
+    <path d="M13 2 4 14h6l-1 8 11-13h-6z" fill="#f6ce00"/>
+  </g>
+
+  <!-- wordmark -->
+  <text x="600" y="470" fill="#f1efe4"
+        font-family="'Fjalla One','Arial Narrow',Impact,sans-serif"
+        font-size="92" text-anchor="middle" letter-spacing="4">THUNDER GYM</text>
+  <text x="600" y="532" fill="#a5a295"
+        font-family="Archivo,'Segoe UI',system-ui,sans-serif"
+        font-size="30" font-weight="600" text-anchor="middle">Train loud. Lift stronger. Mr Thunder Gym, Virudhunagar.</text>
+</svg>

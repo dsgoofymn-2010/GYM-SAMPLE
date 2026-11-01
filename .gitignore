@@ -1,0 +1,7 @@
+node_modules/
+.agents/
+.taste-skill/
+.hallmark/
+skills-lock.json
+reference/
+*.log

@@ -1,0 +1,8 @@
+# robots.txt - Mr Thunder Gym (static frontend)
+# TODO LAUNCH: the sitemap URL uses the placeholder domain
+# www.mrthundergym.example; swap for the real domain before launch
+# (README "Before launch" checklist).
+User-agent: *
+Allow: /
+
+Sitemap: https://www.mrthundergym.example/sitemap.xml

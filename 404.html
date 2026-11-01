@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<!-- =================================================================
+     Mr Thunder Gym — 404.html (Phase 3)
+     Simple themed "not found" page: reuses the shared header/footer,
+     the statement composition and the token system. Noindex: this page
+     exists for stray links, not for search.
+     ================================================================= -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Page Not Found | Mr Thunder Gym</title>
+  <meta name="robots" content="noindex, follow" />
+  <meta name="description" content="That page is not on the Mr Thunder Gym floor. Head back to the training: facilities, achievements, booking and more." />
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600&amp;family=Fjalla+One&amp;display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="js/main.js" defer></script>
+  <script src="js/motion.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- =============== SHARED HEADER =============== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <svg class="brand-bolt" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M13 2 4 14h6l-1 8 11-13h-6z" /></svg>
+        <a class="logo" href="index.html" data-config="logoText">THUNDER GYM</a>
+      </div>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation">
+        <span class="nav-toggle-bar" aria-hidden="true"></span>
+        <span class="nav-toggle-bar" aria-hidden="true"></span>
+        <span class="nav-toggle-bar" aria-hidden="true"></span>
+      </button>
+
+      <nav class="site-nav" id="site-nav" aria-label="Main">
+        <ul class="nav-list">
+          <li><a class="nav-link" href="index.html">Home</a></li>
+          <li><a class="nav-link" href="facilities.html">Facilities</a></li>
+          <li><a class="nav-link" href="achievements.html">Achievements</a></li>
+          <li><a class="nav-link" href="booking.html">Booking</a></li>
+          <li><a class="nav-link" href="about.html">About Us</a></li>
+        </ul>
+        <a class="btn btn-sm" href="booking.html">Book Now</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- =============== STATEMENT: wrong turn =============== -->
+    <!-- PLACEHOLDER: 404 copy (replace when the owner picks wording) -->
+    <section class="section" aria-labelledby="not-found-title">
+      <div class="container">
+        <h1 id="not-found-title" class="statement-text">Wrong turn.</h1>
+        <p class="statement-support">That page is not on our floor. The links below
+          get you back to the training.</p>
+        <div class="form-actions">
+          <a class="btn" href="index.html">Back to the Floor</a>
+          <a class="btn btn-ghost" href="facilities.html">See Facilities</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- =============== BAND: CTA =============== -->
+    <section class="band" aria-labelledby="band-title">
+      <div class="container band-inner">
+        <div>
+          <h2 id="band-title">The Floor Is Open</h2>
+          <p>Book your first session today.</p>
+        </div>
+        <a class="btn" href="booking.html">Book a Session</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- =============== SHARED FOOTER =============== -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-col-brand">
+        <p class="footer-name" data-config="name">Mr Thunder Gym</p>
+        <p class="footer-tagline" data-config="tagline">Train loud. Lift stronger.</p>
+        <ul class="social-row" data-social-links aria-label="Social media">
+          <!-- Placeholder links rendered by js/main.js from SITE_CONFIG -->
+        </ul>
+      </div>
+
+      <div class="footer-col-links">
+        <h2 class="footer-head">Quick Links</h2>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="facilities.html">Facilities</a></li>
+          <li><a href="achievements.html">Achievements</a></li>
+          <li><a href="booking.html">Book a Session</a></li>
+          <li><a href="about.html">About Us</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col-contact">
+        <h2 class="footer-head">Contact</h2>
+        <address class="footer-addr pre-line" data-config="address">12, Annaikarai Street, Near Bus Stand,
+Virudhunagar, Tamil Nadu 626001</address>
+        <p><a class="footer-link" data-config="phone" href="tel:9876543210">98765 43210</a></p>
+        <p><a class="footer-link" data-config="email" href="mailto:info@mrthundergym.in">info@mrthundergym.in</a></p>
+      </div>
+
+      <div class="footer-col-hours">
+        <h2 class="footer-head">Working Hours</h2>
+        <p class="footer-hours pre-line">Mon-Sat: 5:00 AM to 9:30 AM &amp; 5:00 PM to 9:00 PM.
+Sunday: 6:00 AM to 9:00 AM.</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; <span id="footer-year"></span> Mr Thunder Gym, Virudhunagar.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,80 @@
+/* =====================================================================
+   tokens.css — halla system tokens for Mr Thunder Gym (Phase 2A)
+   Dark "electric" system. Every colour and font in the site resolves
+   here; css/style.css and base.css only reference tokens by name.
+   Palette: navy-free near-black ground tinted toward the accent hue
+   (amber-yellow, hue 96). Chroma on neutrals stays above 0.005 so no
+   value is a pure absolute.
+   ===================================================================== */
+:root {
+  /* ---- Spacing scale (scaffold; 24a/b) ---- */
+  --space-3xs: 2px; --space-2xs: 4px; --space-xs: 8px; --space-sm: 12px;
+  --space-md: 16px; --space-lg: 24px; --space-xl: 40px; --space-2xl: 64px;
+  --space-3xl: 96px; --space-4xl: 144px;
+
+  /* ---- Type scale (scaffold) ---- */
+  --text-xs: 0.8125rem; --text-sm: 0.875rem; --text-md: 1rem;
+  --text-lg: 1.25rem; --text-xl: 1.5625rem; --text-2xl: 1.953rem; --text-3xl: 2.441rem;
+  --text-display-s: clamp(2.25rem, 4vw + 0.5rem, 3.75rem);
+  --text-display: clamp(2.75rem, 5vw + 1rem, 5.25rem);
+  --text-section: clamp(2rem, 2.5vw + 1rem, 3.5rem);
+  --text-title: clamp(1.25rem, 0.75vw + 0.875rem, 1.625rem);
+  --text-lead: clamp(1.125rem, 0.35vw + 1rem, 1.375rem);
+
+  /* ---- Motion (scaffold; craft.md § 5) ---- */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in: cubic-bezier(0.7, 0, 0.84, 0);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-micro: 120ms; --dur-short: 220ms; --dur-long: 420ms;
+
+  /* ---- Canvas ---- */
+  --container: 1440px; --gutter: 64px; --gap-columns: 32px;
+  --section-gap-s: 120px; --section-gap: 144px; --section-gap-l: 176px;
+  --header-h: 72px;
+
+  /* ---- Elevation (craft.md § 3) ---- */
+  --z-base: 1; --z-raised: 10; --z-dropdown: 100; --z-sticky: 200;
+  --z-sticky-nav: 300; --z-modal: 400; --z-toast: 500; --z-tooltip: 600;
+
+  /* ---- Surfaces (dark, tinted toward hue 96) ---- */
+  --color-paper: oklch(0.17 0.012 96);
+  --color-paper-2: oklch(0.22 0.013 96);
+  --color-paper-3: oklch(0.27 0.014 96);
+
+  /* ---- Ink (cool off-white family) ---- */
+  --color-ink: oklch(0.95 0.014 96);
+  --color-ink-2: oklch(0.85 0.014 96);
+  --color-muted: oklch(0.71 0.018 96);
+
+  /* ---- Rules (hairlines only; field edges use --color-muted for 3:1) ---- */
+  --color-rule: oklch(0.35 0.015 96);
+
+  /* ---- The accent: lightning yellow ---- */
+  --color-accent: oklch(0.86 0.19 96);
+  --color-accent-ink: oklch(0.15 0.03 96);   /* text/border on accent fills */
+  --color-focus: oklch(0.9 0.18 96);          /* same hue, L within 5% */
+
+  /* ---- Signals ---- */
+  --color-error: oklch(0.72 0.16 27);
+  --color-success: oklch(0.78 0.12 150);
+  --color-overlay: oklch(0.1 0.012 96 / 0.8); /* scrims only */
+
+  /* ---- Faces ---- */
+  --font-display: "Fjalla One", "Arial Narrow", "Impact", sans-serif;
+  --font-body: "Archivo", "Segoe UI", system-ui, sans-serif;
+  --font-outlier: var(--font-display);
+  --tracking-display: -0.01em;   /* condensed face: 0 to -0.015em */
+
+  /* ---- Shape ---- */
+  --radius-card: 4px; --radius-input: 4px; --radius-pill: 999px;
+  --rule-hair: 1px; --shadow-card: none;
+}
+
+@media (max-width: 60rem) {
+  :root { --gutter: 24px; --section-gap-s: 80px; --section-gap: 96px; --section-gap-l: 120px; }
+}
+
+@media (max-width: 40rem) {
+  :root { --gutter: 16px; --section-gap-s: 56px; --section-gap: 72px;
+          --section-gap-l: 96px; --gap-columns: 16px; --header-h: 64px; }
+}

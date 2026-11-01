@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<!-- =================================================================
+     Mr Thunder Gym — achievements.html
+     PHASE 2A: Hallmark restyle. Grid is rendered by js/achievements.js
+     from ACHIEVEMENTS_ITEMS (all placeholder content). Filters +
+     accessible lightbox unchanged. All Phase 1 hooks (ids, classes the
+     renderer builds) keep working.
+     ================================================================= -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Achievements &amp; Transformations | Mr Thunder Gym</title>
+  <meta name="description" content="Podium wins, member transformations and community events from the Thunder family in Virudhunagar. A record that keeps growing." />
+  <!-- TODO LAUNCH: see README "Before launch" — placeholder domain. -->
+  <link rel="canonical" href="https://www.mrthundergym.example/achievements.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Mr Thunder Gym" />
+  <meta property="og:locale" content="en_IN" />
+  <meta property="og:title" content="Achievements &amp; Transformations | Mr Thunder Gym" />
+  <meta property="og:description" content="Podium wins, member transformations and community events from the Thunder family in Virudhunagar. A record that keeps growing." />
+  <meta property="og:url" content="https://www.mrthundergym.example/achievements.html" />
+  <meta property="og:image" content="https://www.mrthundergym.example/assets/social/og-image.svg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="The Thunder Gym bolt mark on the electric near-black stage" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Achievements &amp; Transformations | Mr Thunder Gym" />
+  <meta name="twitter:description" content="Podium wins, member transformations and community events from the Thunder family in Virudhunagar. A record that keeps growing." />
+  <meta name="twitter:image" content="https://www.mrthundergym.example/assets/social/og-image.svg" />
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600&amp;family=Fjalla+One&amp;display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="js/main.js" defer></script>
+  <script src="js/achievements.js" defer></script>
+  <script src="js/motion.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- =============== SHARED HEADER (identical on every page) =============== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <svg class="brand-bolt" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M13 2 4 14h6l-1 8 11-13h-6z" /></svg>
+        <a class="logo" href="index.html" data-config="logoText">THUNDER GYM</a>
+      </div>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation">
+        <span class="nav-toggle-bar" aria-hidden="true"></span>
+        <span class="nav-toggle-bar" aria-hidden="true"></span>
+        <span class="nav-toggle-bar" aria-hidden="true"></span>
+      </button>
+
+      <nav class="site-nav" id="site-nav" aria-label="Main">
+        <ul class="nav-list">
+          <li><a class="nav-link" href="index.html">Home</a></li>
+          <li><a class="nav-link" href="facilities.html">Facilities</a></li>
+          <li><a class="nav-link" href="achievements.html">Achievements</a></li>
+          <li><a class="nav-link" href="booking.html">Booking</a></li>
+          <li><a class="nav-link" href="about.html">About Us</a></li>
+        </ul>
+        <a class="btn btn-sm" href="booking.html">Book Now</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="section">
+      <div class="container">
+        <header class="page-head">
+          <h1>Achievements</h1>
+          <!-- PLACEHOLDER: intro copy -->
+          <p class="section-lead">
+            Moments we are proud of: podiums, member journeys and community
+            events from the Thunder family.
+          </p>
+        </header>
+
+        <!-- =============== STATS STRIP (PLACEHOLDER NUMBERS) =============== -->
+        <div class="stats" aria-label="Gym statistics (sample values)">
+          <!-- PLACEHOLDER: all four numbers below are sample values -->
+          <div class="stat">
+            <div class="stat-value">12+</div>
+            <div class="stat-label">Years of Experience</div>
+          </div>
+          <div class="stat">
+            <div class="stat-value">850+</div>
+            <div class="stat-label">Members</div>
+          </div>
+          <div class="stat">
+            <div class="stat-value">6</div>
+            <div class="stat-label">Trainers</div>
+          </div>
+          <div class="stat">
+            <div class="stat-value">40</div>
+            <div class="stat-label">Awards</div>
+          </div>
+        </div>
+        <p class="note">Sample figures; the gym&rsquo;s real numbers go here before launch.</p>
+
+        <!-- =============== CATEGORY FILTERS ===============
+             Wired to the shared filter logic in js/main.js
+             (re-initialised by js/achievements.js after render). -->
+        <div class="filter-row" role="group" aria-label="Filter achievements"
+             data-filter-group data-filter-target="#achievements-grid" data-filter-default="all">
+          <button type="button" class="filter-btn" data-filter="all" aria-pressed="true">All</button>
+          <button type="button" class="filter-btn" data-filter="competitions">Competitions</button>
+          <button type="button" class="filter-btn" data-filter="transformations">Members&rsquo; Transformations</button>
+          <button type="button" class="filter-btn" data-filter="events">Events</button>
+        </div>
+
+        <!-- =============== GRID (rendered by js/achievements.js) =============== -->
+        <div id="achievements-grid" class="cards-grid">
+          <!-- If JS is disabled this stays empty; a no-JS fallback can be
+               added later. Items live in js/achievements.js. -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =============== LIGHTBOX (opened by js/achievements.js) =============== -->
+  <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Achievement image viewer" hidden>
+    <figure>
+      <img id="lightbox-img" src="assets/images/achievement-competition-1.svg" alt="" />
+      <figcaption>
+        <span id="lightbox-title" class="lightbox-title"></span>
+        <span id="lightbox-meta" class="lightbox-meta"></span>
+      </figcaption>
+    </figure>
+    <button id="lightbox-close" class="lightbox-icon lightbox-close" type="button" aria-label="Close viewer">
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6L6 18" /></svg>
+    </button>
+    <button id="lightbox-prev" class="lightbox-icon lightbox-prev" type="button" aria-label="Previous image">
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M14 6l-6 6 6 6" /></svg>
+    </button>
+    <button id="lightbox-next" class="lightbox-icon lightbox-next" type="button" aria-label="Next image">
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M10 6l6 6-6 6" /></svg>
+    </button>
+  </div>
+
+  <!-- =============== SHARED FOOTER (identical on every page) ===============
+       Static fallback text mirrors js/main.js SITE_CONFIG; main.js
+       refreshes these values from the config on every page load.
+       =================================================================== -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-col-brand">
+        <!-- PLACEHOLDER: gym blurb -->
+        <p class="footer-name" data-config="name">Mr Thunder Gym</p>
+        <p class="footer-tagline" data-config="tagline">Train loud. Lift stronger.</p>
+        <ul class="social-row" data-social-links aria-label="Social media">
+          <!-- Placeholder links rendered by js/main.js from SITE_CONFIG -->
+        </ul>
+      </div>
+
+      <div class="footer-col-links">
+        <h2 class="footer-head">Quick Links</h2>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="facilities.html">Facilities</a></li>
+          <li><a href="achievements.html">Achievements</a></li>
+          <li><a href="booking.html">Book a Session</a></li>
+          <li><a href="about.html">About Us</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col-contact">
+        <h2 class="footer-head">Contact</h2>
+        <address class="footer-addr pre-line" data-config="address">12, Annaikarai Street, Near Bus Stand,
+Virudhunagar, Tamil Nadu 626001</address>
+        <p><a class="footer-link" data-config="phone" href="tel:9876543210">98765 43210</a></p>
+        <p><a class="footer-link" data-config="email" href="mailto:info@mrthundergym.in">info@mrthundergym.in</a></p>
+      </div>
+
+      <div class="footer-col-hours">
+        <h2 class="footer-head">Working Hours</h2>
+        <p class="footer-hours pre-line">Mon-Sat: 5:00 AM to 9:30 AM &amp; 5:00 PM to 9:00 PM.
+Sunday: 6:00 AM to 9:00 AM.</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; <span id="footer-year"></span> Mr Thunder Gym, Virudhunagar.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

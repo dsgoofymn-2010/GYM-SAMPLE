@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- TODO LAUNCH: www.mrthundergym.example is a placeholder domain.
+     Replace every <loc> with the real domain before the site goes
+     live (README "Before launch" checklist). -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://www.mrthundergym.example/</loc>
+  </url>
+  <url>
+    <loc>https://www.mrthundergym.example/facilities.html</loc>
+  </url>
+  <url>
+    <loc>https://www.mrthundergym.example/achievements.html</loc>
+  </url>
+  <url>
+    <loc>https://www.mrthundergym.example/booking.html</loc>
+  </url>
+  <url>
+    <loc>https://www.mrthundergym.example/about.html</loc>
+  </url>
+</urlset>
