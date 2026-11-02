@@ -1,420 +1,269 @@
-<!DOCTYPE html>
-<!-- =================================================================
-     Mr Thunder Gym — index.html (Landing)
-     PHASE 2A: Hallmark restyle. Dark "electric" system documented in
-     design.md. All Phase 1 wiring is unchanged: every id, data-config
-     attribute and JS hook keeps working (SITE_CONFIG fills, nav toggle,
-     card filters).
-     ================================================================= -->
-<html lang="en">
+<!doctype html>
+<html lang="en-IN">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Mr Thunder Gym Virudhunagar | Strength, Classes &amp; Diet Plans</title>
-  <meta name="description" content="Open at five, loud by six. Strength racks, coached group classes and diet plans under one roof near the Virudhunagar bus stand. Book a free trial." />
-  <!-- TODO LAUNCH: www.mrthundergym.example is a placeholder domain —
-       swap it in canonical/og:url/og:image/twitter:image/JSON-LD,
-       robots.txt, sitemap.xml and export og-image.png before launch
-       (README "Before launch" checklist). -->
-  <link rel="canonical" href="https://www.mrthundergym.example/" />
-  <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="Mr Thunder Gym" />
-  <meta property="og:locale" content="en_IN" />
-  <meta property="og:title" content="Mr Thunder Gym Virudhunagar | Strength, Classes &amp; Diet Plans" />
-  <meta property="og:description" content="Open at five, loud by six. Strength racks, coached group classes and diet plans under one roof near the Virudhunagar bus stand. Book a free trial." />
-  <meta property="og:url" content="https://www.mrthundergym.example/" />
-  <meta property="og:image" content="https://www.mrthundergym.example/assets/social/og-image.svg" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
-  <meta property="og:image:alt" content="The Thunder Gym bolt mark on the electric near-black stage" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Mr Thunder Gym Virudhunagar | Strength, Classes &amp; Diet Plans" />
-  <meta name="twitter:description" content="Open at five, loud by six. Strength racks, coached group classes and diet plans under one roof near the Virudhunagar bus stand. Book a free trial." />
-  <meta name="twitter:image" content="https://www.mrthundergym.example/assets/social/og-image.svg" />
-  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600&amp;family=Fjalla+One&amp;display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css" />
-  <script src="js/main.js" defer></script>
-  <script src="js/motion.js" defer></script>
-   <script type="module" src="js/three-scene.js"></script>
-  <!-- TODO LAUNCH: JSON-LD values mirror js/main.js SITE_CONFIG; phone,
-       email and url are PLACEHOLDERS until the gym confirms real data. -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "HealthClub",
-    "@id": "https://www.mrthundergym.example/#gym",
-    "name": "Mr Thunder Gym",
-    "url": "https://www.mrthundergym.example/",
-    "telephone": "+91-98765-43210",
-    "email": "info@mrthundergym.in",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "12, Annaikarai Street, Near Bus Stand",
-      "addressLocality": "Virudhunagar",
-      "addressRegion": "Tamil Nadu",
-      "postalCode": "626001",
-      "addressCountry": "IN"
-    },
-    "openingHoursSpecification": [
-      { "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-        "opens": "05:00", "closes": "09:30" },
-      { "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-        "opens": "17:00", "closes": "21:00" },
-      { "@type": "OpeningHoursSpecification",
-        "dayOfWeek": "Sunday",
-        "opens": "06:00", "closes": "09:00" }
-    ]
-  }
-  </script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mr Thunder Gym, Virudhunagar | Strength, classes and diet plans</title>
+  <meta name="description" content="A strength gym near the Virudhunagar bus stand. Coached batches, personal training and diet plans. Open from 5 AM. First session free.">
+  <meta name="theme-color" content="#f3eee4">
+  <link rel="canonical" href="https://www.mrthundergym.example/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Mr Thunder Gym, Virudhunagar | Strength, classes and diet plans">
+  <meta property="og:description" content="A strength gym near the Virudhunagar bus stand. Coached batches, personal training and diet plans. Open from 5 AM. First session free.">
+  <meta property="og:url" content="https://www.mrthundergym.example/">
+  <meta property="og:image" content="https://www.mrthundergym.example/assets/social/og-image.svg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Manrope:wght@400;600;700;800&amp;display=swap">
+  <link rel="preload" as="image" href="assets/images/found/a-new-sandow-pose-viii.jpg" fetchpriority="high">
+  <link rel="stylesheet" href="css/site.css">
+  <script src="js/site.js" defer></script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "HealthClub", "@id": "https://www.mrthundergym.example/#gym", "name": "Mr Thunder Gym", "url": "https://www.mrthundergym.example/", "telephone": "+91-98765-43210", "email": "info@mrthundergym.in", "image": "https://www.mrthundergym.example/assets/social/og-image.svg", "address": {"@type": "PostalAddress", "streetAddress": "12, Annaikarai Street, Near Bus Stand", "addressLocality": "Virudhunagar", "addressRegion": "Tamil Nadu", "postalCode": "626001", "addressCountry": "IN"}, "openingHoursSpecification": [{"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"], "opens": "05:00", "closes": "09:30"}, {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"], "opens": "17:00", "closes": "21:00"}, {"@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "06:00", "closes": "09:00"}]}</script>
 </head>
 <body>
-  <a class="skip-link" href="#main-content">Skip to main content</a>
-
-  <!-- =============== SHARED HEADER (identical on every page) =============== -->
-  <header class="site-header">
-    <div class="container header-inner">
-      <div class="brand">
-        <svg class="brand-bolt" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M13 2 4 14h6l-1 8 11-13h-6z" /></svg>
-        <a class="logo" href="index.html" data-config="logoText">THUNDER GYM</a>
-      </div>
-
-      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation">
-        <span class="nav-toggle-bar" aria-hidden="true"></span>
-        <span class="nav-toggle-bar" aria-hidden="true"></span>
-        <span class="nav-toggle-bar" aria-hidden="true"></span>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="Mr Thunder Gym, home">
+      <span class="brand-mark"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2 4 14h6l-1 8 10-12h-6z"/></svg></span>
+      <span class="brand-name">Thunder<small>Gym · Virudhunagar</small></span>
+    </a>
+    <nav class="nav" id="site-nav" aria-label="Main">
+      <ul>
+        <li><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="facilities.html">Facilities</a></li>
+        <li><a href="achievements.html">Achievements</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="booking.html">Booking</a></li>
+      </ul>
+    </nav>
+    <div class="header-actions">
+      <a class="call-link" href="tel:+919876543210">98765 43210</a>
+      <a class="btn btn-sm" href="booking.html">Free trial</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+        <svg class="i-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M3 7h18M3 12h18M3 17h18"/></svg>
+        <svg class="i-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 5l14 14M19 5 5 19"/></svg>
       </button>
-
-      <nav class="site-nav" id="site-nav" aria-label="Main">
-        <ul class="nav-list">
-          <li><a class="nav-link" href="index.html">Home</a></li>
-          <li><a class="nav-link" href="facilities.html">Facilities</a></li>
-          <li><a class="nav-link" href="achievements.html">Achievements</a></li>
-          <li><a class="nav-link" href="booking.html">Booking</a></li>
-          <li><a class="nav-link" href="about.html">About Us</a></li>
-        </ul>
-        <a class="btn btn-sm" href="booking.html">Book Now</a>
-      </nav>
     </div>
-  </header>
-
-  <main id="main-content">
-    <!-- =============== HERO: STAGE (copy left, bolt monogram panel right) =============== -->
-    <section class="hero" aria-labelledby="hero-title">
-      <div class="container hero-grid">
+  </div>
+</header>
+<main id="main">
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="wrap">
+      <div class="hero-grid">
         <div class="hero-copy">
-          <h1 id="hero-title" class="hero-head">Open at five. Loud by six.</h1>
-          <!-- PLACEHOLDER: hero copy -->
-          <p class="hero-lead">
-            Strength racks, coached batches and diet plans built around you —
-            all under one roof.
-          </p>
-          <div class="hero-actions">
-            <a class="btn" href="booking.html">Book Your Free Trial</a>
-            <a class="btn btn-ghost" href="facilities.html">Explore Facilities</a>
-          </div>
-          <!-- PLACEHOLDER: hero facts copy -->
-          <ul class="hero-facts" aria-label="Quick facts">
-            <li>Free trial for first-timers</li>
-            <li>Mon–Sat, two sessions daily</li>
-            <li>Near the bus stand</li>
-          </ul>
-        </div>
-
-        <div class="hero-panel">
-          <!-- Placeholder panel art until a real gym photograph replaces
-               this slot (named data-slot below). -->
-          <svg class="hero-bolt" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M13 2 4 14h6l-1 8 11-13h-6z" /></svg>
-          <p class="hero-tag" data-config="tagline">Train loud. Lift stronger.</p>
-          <p class="hero-panel-sub">Mr Thunder Gym, Virudhunagar</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- =============== BENTO: THE FLOOR + OPENING HOURS =============== -->
-    <section class="section" id="facilities-preview" aria-labelledby="facilities-preview-title">
-      <div class="container">
-        <div class="section-head">
-          <div class="section-mark" aria-hidden="true">
-            <svg viewBox="0 0 24 24" focusable="false"><path d="M13 2 4 14h6l-1 8 11-13h-6z" /></svg>
-          </div>
-          <h2 id="facilities-preview-title">Inside the Gym</h2>
-          <!-- PLACEHOLDER: preview copy -->
-          <p class="section-lead">A quick look at the floor.
-            <a class="link-more" href="facilities.html">See All Facilities</a></p>
-        </div>
-
-        <div class="bento">
-          <div class="tile-a">
-            <figure class="tile-frame" data-slot="gym-floor-cardio">
-              <img src="assets/images/facility-treadmills.svg"
-                alt="Row of treadmills (placeholder image)" width="800" height="600" loading="lazy" />
-            </figure>
-            <p class="tile-cap">Cardio corner</p>
-          </div>
-
-          <div class="tile-b">
-            <figure class="tile-frame" data-slot="gym-floor-strength">
-              <img src="assets/images/facility-squat-racks.svg"
-                alt="Squat racks with barbells (placeholder image)" width="800" height="600" loading="lazy" />
-            </figure>
-            <p class="tile-cap">Strength racks</p>
-          </div>
-
-          <div class="tile-info tile-c">
-            <h3>Opening Hours</h3>
-            <!-- PLACEHOLDER: hours row text mirrors js/main.js SITE_CONFIG.hours
-                 (fallback when JS is off). main.js re-renders this schedule
-                 from SITE_CONFIG on every load, so the config stays the
-                 single source; sessions are parsed into rows (no run-on
-                 "&" sentence). -->
-            <div class="tile-schedule" data-config-schedule>
-              <div class="tile-session">
-                <p class="tile-session-day">Mon-Sat</p>
-                <div class="tile-session-times"><span>5:00 AM to 9:30 AM</span><span>5:00 PM to 9:00 PM</span></div>
-              </div>
-              <div class="tile-session">
-                <p class="tile-session-day">Sunday</p>
-                <div class="tile-session-times"><span>6:00 AM to 9:00 AM</span></div>
-              </div>
-            </div>
-            <!-- PLACEHOLDER: schedule note -->
-            <p class="tile-place">Two sessions daily.</p>
-            <div class="tile-cta">
-              <a class="btn" href="booking.html">Book Your Free Trial</a>
-            </div>
-          </div>
-
-          <div class="tile-d">
-            <figure class="tile-frame" data-slot="gym-floor-weightroom">
-              <img src="assets/images/facility-dumbbell-zone.svg"
-                alt="Dumbbell rack (placeholder image)" width="800" height="600" loading="lazy" />
-            </figure>
-            <p class="tile-cap">Free weights wall</p>
-          </div>
-
-          <div class="tile-e">
-            <figure class="tile-frame" data-slot="gym-floor-functional">
-              <img src="assets/images/facility-functional-area.svg"
-                alt="Functional training area with kettlebells (placeholder image)" width="800" height="600" loading="lazy" />
-            </figure>
-            <p class="tile-cap">Functional turf</p>
+          <p class="status" data-status role="status">Mon–Sat 5 AM–9:30 AM, 5–9 PM</p>
+          <h1 class="display hero-title" id="hero-title">Open<br>at five.<br><span class="red">Loud</span> <span class="outline">by six.</span></h1>
+          <p class="lede">Racks, coached batches and diet plans near the Virudhunagar bus stand. Your first session is free.</p>
+          <div class="btn-row">
+            <a class="btn" href="booking.html">Book a free trial</a>
+            <a class="btn btn-line" href="facilities.html">See the floor</a>
           </div>
         </div>
+        <figure class="hero-photo">
+          <img src="assets/images/found/a-new-sandow-pose-viii.jpg" alt="Strongman Eugen Sandow flexing, a photograph from 1902" width="1920" height="2975" fetchpriority="high">
+          <figcaption>Eugen Sandow, 1902</figcaption>
+        </figure>
       </div>
-    </section>
+      <ul class="hero-facts" role="list">
+        <li><b>First session free</b><span>Walk in or book online</span></li>
+        <li><b>Two batches a day</b><span>Morning and evening, Mon–Sat</span></li>
+        <li><b>Coaches on the floor</b><span>Every session, every lift</span></li>
+        <li><b>Near the bus stand</b><span>Annaikarai Street</span></li>
+      </ul>
+    </div>
+  </section>
 
-    <!-- =============== ROWS: WHY TRAIN WITH US =============== -->
-    <section class="section" id="highlights" aria-labelledby="highlights-title">
-      <div class="container">
-        <div class="section-head">
-          <h2 id="highlights-title">Three Ways to Train</h2>
-          <!-- PLACEHOLDER: highlights copy -->
-          <p class="section-lead">Three ways to reach your goal: pick one, or combine all three.</p>
-        </div>
+  <div class="ticker section" aria-hidden="true" style="padding:0;margin-top:var(--gap-section)">
+    <div class="ticker-track">
+      <span>Strength</span><span>Group batches</span><span>Personal training</span><span>Diet plans</span><span>Free weights</span><span>Functional turf</span><span>Strength</span><span>Group batches</span><span>Personal training</span><span>Diet plans</span><span>Free weights</span><span>Functional turf</span>
+    </div>
+  </div>
 
-        <ul class="rows">
-          <li>
-            <h3>Group Classes</h3>
-            <div class="row-body">
-              <!-- PLACEHOLDER: row copy -->
-              <p class="row-role">Coached batches</p>
-              <p class="row-line">High-energy strength, cardio and flexibility batches for every level.</p>
-            </div>
-          </li>
-
-          <li>
-            <h3>Personal Training</h3>
-            <div class="row-body">
-              <p class="row-role">One-on-one</p>
-              <p class="row-line">Coaching with a plan built around your goal and schedule.</p>
-            </div>
-          </li>
-
-          <li>
-            <h3>Diet Plans</h3>
-            <div class="row-body">
-              <p class="row-role">Nutrition</p>
-              <p class="row-line">Simple, local and sustainable meal plans that match your training.</p>
-            </div>
-          </li>
-        </ul>
+  <section class="section" aria-labelledby="train-title">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 class="display h2" id="train-title">Three ways to train</h2>
+        <p class="lede">Pick one or combine them. A coach helps you choose on your first visit.</p>
       </div>
-    </section>
-
-    <!-- =============== THE IRON: found world-photos (credited) ===============
-         Real pictures of the trade from Wikimedia Commons. They show the
-         gym's world, not the gym's own floor; the client's photographs
-         replace the bento slots above. Credits live in the footer. -->
-    <section class="section" id="the-iron" aria-labelledby="iron-title">
-      <div class="container">
-        <div class="section-head">
-          <h2 id="iron-title">Iron and Chalk</h2>
-          <p class="section-lead">The trade in close-up: the tools on the floor and where they began.</p>
-        </div>
-
-        <ul class="iron-grid">
-          <li class="iron-a">
-            <figure class="tile-frame">
-              <img src="assets/images/found/olympic-barbell.jpg"
-                alt="Olympic barbell loaded with training plates" width="1920" height="1043" loading="lazy" />
-              <figcaption class="tile-cap">Olympic barbell, the trade's spine</figcaption>
-            </figure>
-          </li>
-
-          <li class="iron-b">
-            <figure class="tile-frame">
-              <img src="assets/images/found/dumbbells-on-rack-20180112.jpg"
-                alt="Dumbbells lined on a rack from the light end to the heavy end" width="1920" height="1080" loading="lazy" />
-              <figcaption class="tile-cap">A rack waiting for its next set</figcaption>
-            </figure>
-          </li>
-
-          <li class="iron-c">
-            <figure class="tile-frame">
-              <img src="assets/images/found/a-new-sandow-pose-viii.jpg"
-                alt="Eugen Sandow posing in leopard-skin trunks, 1902 photograph" width="1920" height="2975" loading="lazy" />
-              <figcaption class="tile-cap">Eugen Sandow, 1902: the trade as it began</figcaption>
-            </figure>
-          </li>
-
-          <li class="iron-d">
-            <figure class="tile-frame">
-              <img src="assets/images/found/kettlebell-truebalance-romeike.jpg"
-                alt="A single kettlebell on a mat" width="1920" height="1280" loading="lazy" />
-              <figcaption class="tile-cap">One bell, a hundred drills</figcaption>
-            </figure>
-          </li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- =============== SHOWCASE: ACHIEVEMENTS PREVIEW =============== -->
-    <section class="section" id="achievements-preview" aria-labelledby="achievements-preview-title">
-      <div class="container">
-        <div class="section-head">
-          <h2 id="achievements-preview-title">Our Achievements</h2>
-          <!-- PLACEHOLDER: preview copy -->
-          <p class="section-lead">Podiums, transformations and community events from our members.
-            <a class="link-more" href="achievements.html">All Achievements</a></p>
-        </div>
-
-        <div class="showcase">
-          <div class="show-main">
-            <figure class="tile-frame" data-slot="achievement-podium">
-              <img src="assets/images/achievement-competition-1.svg"
-                alt="Podium finish at a district championship (placeholder image)" width="800" height="600" loading="lazy" />
-            </figure>
-            <p class="tile-cap">Podium wins, district championship</p>
+      <div class="programs">
+        <article class="program" data-reveal>
+          <span class="program-num" aria-hidden="true">01</span>
+          <div>
+            <h3 class="display h3">Group batches</h3>
+            <p>Coached strength, cardio and mobility sessions in small groups. Every level trains together.</p>
+            <span class="tag">Morning &amp; evening</span>
           </div>
-
-          <div class="show-b">
-            <figure class="tile-frame" data-slot="achievement-transformation">
-              <img src="assets/images/achievement-transformation-1.svg"
-                alt="Member transformation (placeholder image)" width="800" height="600" loading="lazy" />
-            </figure>
-            <p class="tile-cap">Member transformations</p>
+        </article>
+        <article class="program" data-reveal>
+          <span class="program-num" aria-hidden="true">02</span>
+          <div>
+            <h3 class="display h3">Personal training</h3>
+            <p>One coach, one plan, built around your goal and your working hours.</p>
+            <span class="tag">One-on-one</span>
           </div>
-
-          <div class="show-c">
-            <figure class="tile-frame" data-slot="achievement-event">
-              <img src="assets/images/achievement-event-1.svg"
-                alt="Community fitness event (placeholder image)" width="800" height="600" loading="lazy" />
-            </figure>
-            <p class="tile-cap">Events &amp; camps for the whole community</p>
+        </article>
+        <article class="program" data-reveal>
+          <span class="program-num" aria-hidden="true">03</span>
+          <div>
+            <h3 class="display h3">Diet plans</h3>
+            <p>Simple meal plans with local food that fit your training and your budget.</p>
+            <span class="tag">Nutrition</span>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- =============== STATEMENT: ABOUT TEASER =============== -->
-    <section class="section" id="about-teaser" aria-labelledby="teaser-title">
-      <div class="container">
-        <div class="statement-grid">
-          <div class="statement-copy">
-            <h2 id="teaser-title" class="statement-text">Built for <strong>real</strong> progress</h2>
-          </div>
-          <div class="statement-side">
-            <!-- PLACEHOLDER: teaser copy -->
-            <p class="statement-support">Mr Thunder Gym: serious equipment, friendly coaches and a
-              community that shows up, near the Virudhunagar bus stand.</p>
-            <p class="statement-support">Whether you are starting from scratch or chasing a personal
-              best, there is a plan here for you.</p>
-            <a class="link-more" href="about.html">More About Us</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- =============== BAND: FINAL CTA =============== -->
-    <section class="band" aria-labelledby="cta-title">
-      <div class="container band-inner">
-        <div class="band-copy">
-          <h2 id="cta-title">The Floor Is Open</h2>
-          <!-- PLACEHOLDER: CTA copy -->
-          <p>Walk in for a free trial, or reserve your first session online.</p>
-        </div>
-        <a class="btn" href="booking.html">Book Your Free Trial</a>
-        <a class="band-number" data-config="phone" href="tel:9876543210">
-          98765 43210
-          <span class="band-number-label">Ring the desk</span>
-        </a>
-      </div>
-    </section>  </main>
-
-  <!-- =============== SHARED FOOTER (identical on every page) ===============
-       Static fallback text mirrors js/main.js SITE_CONFIG; main.js
-       refreshes these values from the config on every page load.
-       =================================================================== -->
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <div class="footer-col-brand">
-        <!-- PLACEHOLDER: gym blurb -->
-        <p class="footer-name" data-config="name">Mr Thunder Gym</p>
-        <p class="footer-tagline" data-config="tagline">Train loud. Lift stronger.</p>
-        <ul class="social-row" data-social-links aria-label="Social media">
-          <!-- Placeholder links rendered by js/main.js from SITE_CONFIG -->
-        </ul>
-      </div>
-
-      <div class="footer-col-links">
-        <h2 class="footer-head">Quick Links</h2>
-        <ul class="footer-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="facilities.html">Facilities</a></li>
-          <li><a href="achievements.html">Achievements</a></li>
-          <li><a href="booking.html">Book a Session</a></li>
-          <li><a href="about.html">About Us</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-col-contact">
-        <h2 class="footer-head">Contact</h2>
-        <address class="footer-addr pre-line" data-config="address">12, Annaikarai Street, Near Bus Stand,
-Virudhunagar, Tamil Nadu 626001</address>
-        <p><a class="footer-link" data-config="phone" href="tel:9876543210">98765 43210</a></p>
-        <p><a class="footer-link" data-config="email" href="mailto:info@mrthundergym.in">info@mrthundergym.in</a></p>
-      </div>
-
-      <div class="footer-col-hours">
-        <h2 class="footer-head">Working Hours</h2>
-        <p class="footer-hours pre-line">Mon-Sat: 5:00 AM to 9:30 AM &amp; 5:00 PM to 9:00 PM.
-Sunday: 6:00 AM to 9:00 AM.</p>
+        </article>
       </div>
     </div>
+  </section>
 
-    <div class="footer-bottom">
-      <div class="container">
-        <p>&copy; <span id="footer-year"></span> Mr Thunder Gym, Virudhunagar.</p>
-        <!-- CREDITS: found pictures are shared across pages. Keep
-             in step with assets/images/found/credits.json. -->
-        <p class="credits">Pictures: <a href="https://commons.wikimedia.org/wiki/File:Olympic_barbell.jpg">“Olympic barbell”</a> by Tomáš Pilík, <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a>, via Wikimedia Commons; <a href="https://commons.wikimedia.org/wiki/File:Dumbbells_on_rack_20180112.jpg">“Dumbbells on rack”</a> by Santeri Viinamäki, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a>, via Wikimedia Commons; <a href="https://commons.wikimedia.org/wiki/File:Kettlebell_truebalance_romeike.jpg">“Kettlebell truebalance”</a> by Detlef Romeike, <a href="https://creativecommons.org/licenses/by-sa/2.5">CC BY-SA 2.5</a>, via Wikimedia Commons; <a href="https://commons.wikimedia.org/wiki/File:%22A_New_Sandow_Pose_(VIII)%22,_Eugen_Sandow_Wellcome_L0035270_-_restoration.jpg">“Eugen Sandow, 1902”</a> restored by Adam Cuerden, <a href="https://creativecommons.org/publicdomain/mark/1.0/">public domain</a>, via Wikimedia Commons.</p>
+  <section class="band on-night" aria-labelledby="hours-title">
+    <div class="wrap hours-grid">
+      <div>
+        <p class="kicker">Timetable</p>
+        <h2 class="display h1" id="hours-title" style="margin-block:1rem 1.25rem">Two sessions,<br>six days.</h2>
+        <p class="lede">The floor opens before work and again after. Sunday is a short morning session.</p>
+        <p class="status" data-status role="status" style="margin-top:1.5rem;color:var(--ink)">Check today's hours</p>
+      </div>
+        <table class="board">
+          <caption class="sr-only">Weekly opening hours</caption>
+          <thead class="sr-only"><tr><th scope="col">Day</th><th scope="col">Morning</th><th scope="col">Evening</th></tr></thead>
+          <tbody>
+          <tr data-day="1"><th scope="row">Monday</th><td>5:00 – 9:30 AM</td><td>5:00 – 9:00 PM</td></tr>
+          <tr data-day="2"><th scope="row">Tuesday</th><td>5:00 – 9:30 AM</td><td>5:00 – 9:00 PM</td></tr>
+          <tr data-day="3"><th scope="row">Wednesday</th><td>5:00 – 9:30 AM</td><td>5:00 – 9:00 PM</td></tr>
+          <tr data-day="4"><th scope="row">Thursday</th><td>5:00 – 9:30 AM</td><td>5:00 – 9:00 PM</td></tr>
+          <tr data-day="5"><th scope="row">Friday</th><td>5:00 – 9:30 AM</td><td>5:00 – 9:00 PM</td></tr>
+          <tr data-day="6"><th scope="row">Saturday</th><td>5:00 – 9:30 AM</td><td>5:00 – 9:00 PM</td></tr>
+          <tr data-day="0"><th scope="row">Sunday</th><td>6:00 – 9:00 AM</td><td><span class="closed">Closed</span></td></tr>
+          </tbody>
+        </table>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="floor-title">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 class="display h2" id="floor-title">Iron and chalk</h2>
+        <a class="link-arrow" href="facilities.html">All equipment <span aria-hidden="true">&rarr;</span></a>
+      </div>
+      <div class="strip">
+        <figure data-reveal>
+          <div class="frame"><img src="assets/images/found/olympic-barbell.jpg" alt="Olympic barbell loaded with plates" width="1920" height="1043" loading="lazy"></div>
+          <figcaption><b>Racks and barbells</b>Squat racks, benches and Olympic bars.</figcaption>
+        </figure>
+        <figure data-reveal>
+          <div class="frame"><img src="assets/images/found/dumbbells-on-rack-20180112.jpg" alt="Dumbbells lined up on a rack from light to heavy" width="1920" height="1442" loading="lazy"></div>
+          <figcaption><b>Dumbbell wall</b>Light warm-up pairs to heavy work sets.</figcaption>
+        </figure>
+        <figure data-reveal>
+          <div class="frame"><img src="assets/images/found/kettlebell-truebalance-romeike.jpg" alt="A single kettlebell on the floor" width="1920" height="1440" loading="lazy"></div>
+          <figcaption><b>Functional turf</b>Kettlebells, ropes, boxes and mats.</figcaption>
+        </figure>
+      </div>
+      <p class="note">Stock photos for now. The gym's own photos will replace them.</p>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="wins-title">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 class="display h2" id="wins-title">Recent wins</h2>
+        <a class="link-arrow" href="achievements.html">All achievements <span aria-hidden="true">&rarr;</span></a>
+      </div>
+      <dl class="stats" style="margin-bottom:3rem">
+        <div><dt>Years open</dt><dd>12+</dd></div>
+        <div><dt>Members</dt><dd>850+</dd></div>
+        <div><dt>Coaches</dt><dd>6</dd></div>
+        <div><dt>Awards</dt><dd>40</dd></div>
+      </dl>
+      <ul class="wins" role="list">
+        <li class="win" data-tags="competitions" data-reveal>
+          <button class="win-btn" type="button" aria-label="Enlarge: District Championship: 3 gold medals"><img src="assets/images/achievement-competition-1.svg" alt="Team on the district championship podium (sample image)" width="800" height="600" loading="lazy"></button>
+          <p class="win-meta"><span>Competitions</span><span>2024</span></p>
+          <h3 class="display">District Championship: 3 gold medals</h3>
+          <p>Team Thunder swept the podium at the district bodybuilding championship.</p>
+        </li>
+        <li class="win" data-tags="transformations" data-reveal>
+          <button class="win-btn" type="button" aria-label="Enlarge: Mr Ramanathan, 18 kg down"><img src="assets/images/achievement-transformation-1.svg" alt="Member before and after a weight-loss transformation (sample image)" width="800" height="600" loading="lazy"></button>
+          <p class="win-meta"><span>Transformation</span><span>2024</span></p>
+          <h3 class="display">Mr Ramanathan, 18 kg down</h3>
+          <p>Twelve months of supervised training and diet coaching.</p>
+        </li>
+        <li class="win" data-tags="events" data-reveal>
+          <button class="win-btn" type="button" aria-label="Enlarge: Fitness awareness camp"><img src="assets/images/achievement-event-1.svg" alt="Crowd at the fitness awareness camp (sample image)" width="800" height="600" loading="lazy"></button>
+          <p class="win-meta"><span>Event</span><span>2024</span></p>
+          <h3 class="display">Fitness awareness camp</h3>
+          <p>Free fitness screening for the Virudhunagar community.</p>
+        </li>
+      </ul>
+      <p class="note">Sample figures and stories. The gym's real numbers go here before launch.</p>
+    </div>
+  </section>
+  <section class="band on-night cta" aria-labelledby="cta-title">
+    <div class="wrap" data-reveal>
+      <p class="kicker">Your first session</p>
+      <h2 class="display h1" id="cta-title">First set's<br><em>on us.</em></h2>
+      <p class="lede">Walk in during opening hours or book a slot. A coach will show you around and plan your first week.</p>
+      <div class="btn-row" style="margin-top:2rem">
+        <a class="btn" href="booking.html">Book a free trial</a>
+        <a class="btn btn-line" href="https://wa.me/919876543210" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3a.5.5 0 0 0 0-.4l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .1-1.3c0-.1-.2-.2-.5-.3Z"/></svg> WhatsApp us</a>
       </div>
     </div>
-  </footer>
+  </section>
+
+  <dialog class="lightbox" id="lightbox" aria-labelledby="lb-title">
+    <div class="lightbox-inner">
+      <div class="lightbox-bar">
+        <div style="display:flex;gap:.5rem">
+          <button class="icon-btn" type="button" data-lb-prev aria-label="Previous">&larr;</button>
+          <button class="icon-btn" type="button" data-lb-next aria-label="Next">&rarr;</button>
+        </div>
+        <button class="icon-btn" type="button" data-lb-close>Close</button>
+      </div>
+      <img src="" alt="">
+      <div class="lightbox-body">
+        <p class="kicker" data-lb-meta></p>
+        <h2 id="lb-title"></h2>
+        <p class="muted" data-lb-text></p>
+      </div>
+    </div>
+  </dialog>
+</main>
+<footer class="site-footer on-night">
+  <div class="wrap">
+    <p class="footer-mast" aria-hidden="true">Train loud.<br><span>Lift stronger.</span></p>
+    <div class="footer-grid">
+      <div>
+        <h2>Find us</h2>
+        <address>Mr Thunder Gym<br>12, Annaikarai Street, Near Bus Stand,<br>Virudhunagar, Tamil Nadu 626001</address>
+        <a class="link-arrow" href="https://www.google.com/maps/search/?api=1&amp;query=Annaikarai+Street+Bus+Stand+Virudhunagar+626001" target="_blank" rel="noopener">Open in Maps <span aria-hidden="true">&rarr;</span></a>
+      </div>
+      <div>
+        <h2>Hours</h2>
+        <p>Mon–Sat<br>5:00–9:30 AM &amp; 5:00–9:00 PM</p>
+        <p style="margin-top:.5rem">Sunday<br>6:00–9:00 AM</p>
+      </div>
+      <div>
+        <h2>Contact</h2>
+        <ul role="list">
+          <li><a href="tel:+919876543210">98765 43210</a></li>
+          <li><a href="mailto:info@mrthundergym.in">info@mrthundergym.in</a></li>
+          <li><a href="https://wa.me/919876543210" target="_blank" rel="noopener">WhatsApp the desk</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Pages</h2>
+        <ul role="list">
+          <li><a href="index.html">Home</a></li><li><a href="facilities.html">Facilities</a></li><li><a href="achievements.html">Achievements</a></li><li><a href="about.html">About</a></li><li><a href="booking.html">Booking</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-base">
+      <p>&copy; <span data-year>2026</span> Mr Thunder Gym, Virudhunagar.</p>
+      <p class="credits">Photos via Wikimedia Commons: “Olympic barbell” by Tomáš Pilík, <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a>; “Dumbbells on rack” by Santeri Viinamäki, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a>; “Kettlebell truebalance” by Detlef Romeike, <a href="https://creativecommons.org/licenses/by-sa/2.5">CC BY-SA 2.5</a>; “A New Sandow Pose (VIII)”, 1902, public domain. Greyscale treatment applied.</p>
+    </div>
+  </div>
+</footer>
 </body>
 </html>

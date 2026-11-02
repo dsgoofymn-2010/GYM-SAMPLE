@@ -1,125 +1,95 @@
-<!DOCTYPE html>
-<!-- =================================================================
-     Mr Thunder Gym — 404.html (Phase 3)
-     Simple themed "not found" page: reuses the shared header/footer,
-     the statement composition and the token system. Noindex: this page
-     exists for stray links, not for search.
-     ================================================================= -->
-<html lang="en">
+<!doctype html>
+<html lang="en-IN">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Page Not Found | Mr Thunder Gym</title>
-  <meta name="robots" content="noindex, follow" />
-  <meta name="description" content="That page is not on the Mr Thunder Gym floor. Head back to the training: facilities, achievements, booking and more." />
-  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600&amp;family=Fjalla+One&amp;display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css" />
-  <script src="js/main.js" defer></script>
-  <script src="js/motion.js" defer></script>
-   <script type="module" src="js/three-scene.js"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Page not found | Mr Thunder Gym</title>
+  <meta name="description" content="This page does not exist.">
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#f3eee4">
+  <link rel="canonical" href="https://www.mrthundergym.example/404.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Page not found | Mr Thunder Gym">
+  <meta property="og:description" content="This page does not exist.">
+  <meta property="og:url" content="https://www.mrthundergym.example/404.html">
+  <meta property="og:image" content="https://www.mrthundergym.example/assets/social/og-image.svg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Manrope:wght@400;600;700;800&amp;display=swap">
+  <link rel="stylesheet" href="css/site.css">
+  <script src="js/site.js" defer></script>
 </head>
 <body>
-  <a class="skip-link" href="#main-content">Skip to main content</a>
-
-  <!-- =============== SHARED HEADER =============== -->
-  <header class="site-header">
-    <div class="container header-inner">
-      <div class="brand">
-        <svg class="brand-bolt" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M13 2 4 14h6l-1 8 11-13h-6z" /></svg>
-        <a class="logo" href="index.html" data-config="logoText">THUNDER GYM</a>
-      </div>
-
-      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation">
-        <span class="nav-toggle-bar" aria-hidden="true"></span>
-        <span class="nav-toggle-bar" aria-hidden="true"></span>
-        <span class="nav-toggle-bar" aria-hidden="true"></span>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="Mr Thunder Gym, home">
+      <span class="brand-mark"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2 4 14h6l-1 8 10-12h-6z"/></svg></span>
+      <span class="brand-name">Thunder<small>Gym · Virudhunagar</small></span>
+    </a>
+    <nav class="nav" id="site-nav" aria-label="Main">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="facilities.html">Facilities</a></li>
+        <li><a href="achievements.html">Achievements</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="booking.html">Booking</a></li>
+      </ul>
+    </nav>
+    <div class="header-actions">
+      <a class="call-link" href="tel:+919876543210">98765 43210</a>
+      <a class="btn btn-sm" href="booking.html">Free trial</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+        <svg class="i-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M3 7h18M3 12h18M3 17h18"/></svg>
+        <svg class="i-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 5l14 14M19 5 5 19"/></svg>
       </button>
-
-      <nav class="site-nav" id="site-nav" aria-label="Main">
-        <ul class="nav-list">
-          <li><a class="nav-link" href="index.html">Home</a></li>
-          <li><a class="nav-link" href="facilities.html">Facilities</a></li>
-          <li><a class="nav-link" href="achievements.html">Achievements</a></li>
-          <li><a class="nav-link" href="booking.html">Booking</a></li>
-          <li><a class="nav-link" href="about.html">About Us</a></li>
-        </ul>
-        <a class="btn btn-sm" href="booking.html">Book Now</a>
-      </nav>
     </div>
-  </header>
-
-  <main id="main-content">
-    <!-- =============== STATEMENT: wrong turn =============== -->
-    <!-- PLACEHOLDER: 404 copy (replace when the owner picks wording) -->
-    <section class="section" aria-labelledby="not-found-title">
-      <div class="container">
-        <h1 id="not-found-title" class="statement-text">Wrong turn.</h1>
-        <p class="statement-support">That page is not on our floor. The links below
-          get you back to the training.</p>
-        <div class="form-actions">
-          <a class="btn" href="index.html">Back to the Floor</a>
-          <a class="btn btn-ghost" href="facilities.html">See Facilities</a>
-        </div>
+  </div>
+</header>
+<main id="main">
+  <section class="wrap lost">
+    <p class="display hero-title" aria-hidden="true">404</p>
+    <h1 class="display h2">Missed the rep.</h1>
+    <p class="lede">This page doesn't exist. Head back and go again.</p>
+    <div class="btn-row"><a class="btn" href="index.html">Back to home</a><a class="btn btn-line" href="booking.html">Book a session</a></div>
+  </section>
+</main>
+<footer class="site-footer on-night">
+  <div class="wrap">
+    <p class="footer-mast" aria-hidden="true">Train loud.<br><span>Lift stronger.</span></p>
+    <div class="footer-grid">
+      <div>
+        <h2>Find us</h2>
+        <address>Mr Thunder Gym<br>12, Annaikarai Street, Near Bus Stand,<br>Virudhunagar, Tamil Nadu 626001</address>
+        <a class="link-arrow" href="https://www.google.com/maps/search/?api=1&amp;query=Annaikarai+Street+Bus+Stand+Virudhunagar+626001" target="_blank" rel="noopener">Open in Maps <span aria-hidden="true">&rarr;</span></a>
       </div>
-    </section>
-
-    <!-- =============== BAND: CTA =============== -->
-    <section class="band" aria-labelledby="band-title">
-      <div class="container band-inner">
-        <div>
-          <h2 id="band-title">The Floor Is Open</h2>
-          <p>Book your first session today.</p>
-        </div>
-        <a class="btn" href="booking.html">Book Your Free Trial</a>
+      <div>
+        <h2>Hours</h2>
+        <p>Mon–Sat<br>5:00–9:30 AM &amp; 5:00–9:00 PM</p>
+        <p style="margin-top:.5rem">Sunday<br>6:00–9:00 AM</p>
       </div>
-    </section>
-  </main>
-
-  <!-- =============== SHARED FOOTER =============== -->
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <div class="footer-col-brand">
-        <p class="footer-name" data-config="name">Mr Thunder Gym</p>
-        <p class="footer-tagline" data-config="tagline">Train loud. Lift stronger.</p>
-        <ul class="social-row" data-social-links aria-label="Social media">
-          <!-- Placeholder links rendered by js/main.js from SITE_CONFIG -->
+      <div>
+        <h2>Contact</h2>
+        <ul role="list">
+          <li><a href="tel:+919876543210">98765 43210</a></li>
+          <li><a href="mailto:info@mrthundergym.in">info@mrthundergym.in</a></li>
+          <li><a href="https://wa.me/919876543210" target="_blank" rel="noopener">WhatsApp the desk</a></li>
         </ul>
       </div>
-
-      <div class="footer-col-links">
-        <h2 class="footer-head">Quick Links</h2>
-        <ul class="footer-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="facilities.html">Facilities</a></li>
-          <li><a href="achievements.html">Achievements</a></li>
-          <li><a href="booking.html">Book a Session</a></li>
-          <li><a href="about.html">About Us</a></li>
+      <div>
+        <h2>Pages</h2>
+        <ul role="list">
+          <li><a href="index.html">Home</a></li><li><a href="facilities.html">Facilities</a></li><li><a href="achievements.html">Achievements</a></li><li><a href="about.html">About</a></li><li><a href="booking.html">Booking</a></li>
         </ul>
       </div>
-
-      <div class="footer-col-contact">
-        <h2 class="footer-head">Contact</h2>
-        <address class="footer-addr pre-line" data-config="address">12, Annaikarai Street, Near Bus Stand,
-Virudhunagar, Tamil Nadu 626001</address>
-        <p><a class="footer-link" data-config="phone" href="tel:9876543210">98765 43210</a></p>
-        <p><a class="footer-link" data-config="email" href="mailto:info@mrthundergym.in">info@mrthundergym.in</a></p>
-      </div>
-
-      <div class="footer-col-hours">
-        <h2 class="footer-head">Working Hours</h2>
-        <p class="footer-hours pre-line">Mon-Sat: 5:00 AM to 9:30 AM &amp; 5:00 PM to 9:00 PM.
-Sunday: 6:00 AM to 9:00 AM.</p>
-      </div>
     </div>
-
-    <div class="footer-bottom">
-      <div class="container">
-        <p>&copy; <span id="footer-year"></span> Mr Thunder Gym, Virudhunagar.</p>
-      </div>
+    <div class="footer-base">
+      <p>&copy; <span data-year>2026</span> Mr Thunder Gym, Virudhunagar.</p>
+      <p class="credits">Photos via Wikimedia Commons: “Olympic barbell” by Tomáš Pilík, <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a>; “Dumbbells on rack” by Santeri Viinamäki, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a>; “Kettlebell truebalance” by Detlef Romeike, <a href="https://creativecommons.org/licenses/by-sa/2.5">CC BY-SA 2.5</a>; “A New Sandow Pose (VIII)”, 1902, public domain. Greyscale treatment applied.</p>
     </div>
-  </footer>
+  </div>
+</footer>
 </body>
 </html>

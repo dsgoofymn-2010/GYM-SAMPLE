@@ -1,246 +1,207 @@
-<!DOCTYPE html>
-<!-- =================================================================
-     Mr Thunder Gym — achievements.html
-     PHASE 2A: Hallmark restyle. Grid is rendered by js/achievements.js
-     from ACHIEVEMENTS_ITEMS (all placeholder content). Filters +
-     accessible lightbox unchanged. All Phase 1 hooks (ids, classes the
-     renderer builds) keep working.
-     ================================================================= -->
-<html lang="en">
+<!doctype html>
+<html lang="en-IN">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Achievements &amp; Transformations | Mr Thunder Gym</title>
-  <meta name="description" content="Podium wins, member transformations and community events from the Thunder family in Virudhunagar. A record that keeps growing." />
-  <!-- TODO LAUNCH: see README "Before launch" — placeholder domain. -->
-  <link rel="canonical" href="https://www.mrthundergym.example/achievements.html" />
-  <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="Mr Thunder Gym" />
-  <meta property="og:locale" content="en_IN" />
-  <meta property="og:title" content="Achievements &amp; Transformations | Mr Thunder Gym" />
-  <meta property="og:description" content="Podium wins, member transformations and community events from the Thunder family in Virudhunagar. A record that keeps growing." />
-  <meta property="og:url" content="https://www.mrthundergym.example/achievements.html" />
-  <meta property="og:image" content="https://www.mrthundergym.example/assets/social/og-image.svg" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
-  <meta property="og:image:alt" content="The Thunder Gym bolt mark on the electric near-black stage" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Achievements &amp; Transformations | Mr Thunder Gym" />
-  <meta name="twitter:description" content="Podium wins, member transformations and community events from the Thunder family in Virudhunagar. A record that keeps growing." />
-  <meta name="twitter:image" content="https://www.mrthundergym.example/assets/social/og-image.svg" />
-  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600&amp;family=Fjalla+One&amp;display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css" />
-  <script src="js/main.js" defer></script>
-  <script src="js/achievements.js" defer></script>
-  <script src="js/motion.js" defer></script>
-   <script type="module" src="js/three-scene.js"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Achievements and transformations | Mr Thunder Gym</title>
+  <meta name="description" content="Podium finishes, member transformations and community events from Mr Thunder Gym, Virudhunagar.">
+  <meta name="theme-color" content="#f3eee4">
+  <link rel="canonical" href="https://www.mrthundergym.example/achievements.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Achievements and transformations | Mr Thunder Gym">
+  <meta property="og:description" content="Podium finishes, member transformations and community events from Mr Thunder Gym, Virudhunagar.">
+  <meta property="og:url" content="https://www.mrthundergym.example/achievements.html">
+  <meta property="og:image" content="https://www.mrthundergym.example/assets/social/og-image.svg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Manrope:wght@400;600;700;800&amp;display=swap">
+  <link rel="stylesheet" href="css/site.css">
+  <script src="js/site.js" defer></script>
 </head>
 <body>
-  <a class="skip-link" href="#main-content">Skip to main content</a>
-
-  <!-- =============== SHARED HEADER (identical on every page) =============== -->
-  <header class="site-header">
-    <div class="container header-inner">
-      <div class="brand">
-        <svg class="brand-bolt" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M13 2 4 14h6l-1 8 11-13h-6z" /></svg>
-        <a class="logo" href="index.html" data-config="logoText">THUNDER GYM</a>
-      </div>
-
-      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation">
-        <span class="nav-toggle-bar" aria-hidden="true"></span>
-        <span class="nav-toggle-bar" aria-hidden="true"></span>
-        <span class="nav-toggle-bar" aria-hidden="true"></span>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="Mr Thunder Gym, home">
+      <span class="brand-mark"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2 4 14h6l-1 8 10-12h-6z"/></svg></span>
+      <span class="brand-name">Thunder<small>Gym · Virudhunagar</small></span>
+    </a>
+    <nav class="nav" id="site-nav" aria-label="Main">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="facilities.html">Facilities</a></li>
+        <li><a href="achievements.html" aria-current="page">Achievements</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="booking.html">Booking</a></li>
+      </ul>
+    </nav>
+    <div class="header-actions">
+      <a class="call-link" href="tel:+919876543210">98765 43210</a>
+      <a class="btn btn-sm" href="booking.html">Free trial</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+        <svg class="i-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M3 7h18M3 12h18M3 17h18"/></svg>
+        <svg class="i-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 5l14 14M19 5 5 19"/></svg>
       </button>
-
-      <nav class="site-nav" id="site-nav" aria-label="Main">
-        <ul class="nav-list">
-          <li><a class="nav-link" href="index.html">Home</a></li>
-          <li><a class="nav-link" href="facilities.html">Facilities</a></li>
-          <li><a class="nav-link" href="achievements.html">Achievements</a></li>
-          <li><a class="nav-link" href="booking.html">Booking</a></li>
-          <li><a class="nav-link" href="about.html">About Us</a></li>
-        </ul>
-        <a class="btn btn-sm" href="booking.html">Book Now</a>
-      </nav>
     </div>
-  </header>
-
-  <main id="main-content">
-    <section class="section">
-      <div class="container">
-        <header class="page-head">
-          <h1>Achievements</h1>
-          <!-- PLACEHOLDER: intro copy -->
-        </header>
-
-        <p class="lead-open">
-          A hall of record from the Thunder family in Virudhunagar:
-          podium finishes, honest member transformations and the community
-          evenings that keep the floor alive.
-        </p>
-
-        <!-- =============== STATS STRIP (PLACEHOLDER NUMBERS) =============== -->
-        <div class="stats" aria-label="Gym statistics (sample values)">
-          <!-- PLACEHOLDER: all four numbers below are sample values -->
-          <div class="stat">
-            <div class="stat-value">12+</div>
-            <div class="stat-label">Years of Experience</div>
-          </div>
-          <div class="stat">
-            <div class="stat-value">850+</div>
-            <div class="stat-label">Members</div>
-          </div>
-          <div class="stat">
-            <div class="stat-value">6</div>
-            <div class="stat-label">Trainers</div>
-          </div>
-          <div class="stat">
-            <div class="stat-value">40</div>
-            <div class="stat-label">Awards</div>
-          </div>
-        </div>
-        <p class="note">Sample figures; the gym&rsquo;s real numbers go here before launch.</p>
-
-        <!-- =============== CATEGORY FILTERS ===============
-             Wired to the shared filter logic in js/main.js
-             (re-initialised by js/achievements.js after render). -->
-        <div class="filter-row" role="group" aria-label="Filter achievements"
-             data-filter-group data-filter-target="#achievements-grid" data-filter-default="all">
-          <button type="button" class="filter-btn" data-filter="all" aria-pressed="true">All</button>
-          <button type="button" class="filter-btn" data-filter="competitions">Competitions</button>
-          <button type="button" class="filter-btn" data-filter="transformations">Members&rsquo; Transformations</button>
-          <button type="button" class="filter-btn" data-filter="events">Events</button>
-        </div>
-
-        <!-- =============== GRID (rendered by js/achievements.js) =============== -->
-        <div id="achievements-grid" class="cards-grid">
-          <!-- If JS is disabled this stays empty; a no-JS fallback can be
-               added later. Items live in js/achievements.js. -->
-        </div>
-      </div>
-    </section>
-    <!-- =============== THE IRON: found world-photos (credited) ===============
-         Real pictures of the trade from Wikimedia Commons. They show the
-         gym's world, not the gym's own floor; the client's photographs
-         replace the bento slots above. Credits live in the footer. -->
-    <section class="section" id="the-iron" aria-labelledby="iron-title">
-      <div class="container">
-        <div class="section-head">
-          <h2 id="iron-title">Iron and Chalk</h2>
-          <p class="section-lead">The trade in close-up: the tools on the floor and where they began.</p>
-        </div>
-
-        <ul class="iron-grid">
-          <li class="iron-a">
-            <figure class="tile-frame">
-              <img src="assets/images/found/olympic-barbell.jpg"
-                alt="Olympic barbell loaded with training plates" width="1920" height="1043" loading="lazy" />
-              <figcaption class="tile-cap">Olympic barbell, the trade's spine</figcaption>
-            </figure>
-          </li>
-
-          <li class="iron-b">
-            <figure class="tile-frame">
-              <img src="assets/images/found/dumbbells-on-rack-20180112.jpg"
-                alt="Dumbbells lined on a rack from the light end to the heavy end" width="1920" height="1080" loading="lazy" />
-              <figcaption class="tile-cap">A rack waiting for its next set</figcaption>
-            </figure>
-          </li>
-
-          <li class="iron-c">
-            <figure class="tile-frame">
-              <img src="assets/images/found/a-new-sandow-pose-viii.jpg"
-                alt="Eugen Sandow posing in leopard-skin trunks, 1902 photograph" width="1920" height="2975" loading="lazy" />
-              <figcaption class="tile-cap">Eugen Sandow, 1902: the trade as it began</figcaption>
-            </figure>
-          </li>
-
-          <li class="iron-d">
-            <figure class="tile-frame">
-              <img src="assets/images/found/kettlebell-truebalance-romeike.jpg"
-                alt="A single kettlebell on a mat" width="1920" height="1280" loading="lazy" />
-              <figcaption class="tile-cap">One bell, a hundred drills</figcaption>
-            </figure>
-          </li>
-        </ul>
-      </div>
-    </section>
-
-  </main>
-
-  <!-- =============== LIGHTBOX (opened by js/achievements.js) =============== -->
-  <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Achievement image viewer" hidden>
-    <figure>
-      <img id="lightbox-img" src="assets/images/achievement-competition-1.svg" alt="" />
-      <figcaption>
-        <span id="lightbox-title" class="lightbox-title"></span>
-        <span id="lightbox-meta" class="lightbox-meta"></span>
-      </figcaption>
-    </figure>
-    <button id="lightbox-close" class="lightbox-icon lightbox-close" type="button" aria-label="Close viewer">
-      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6L6 18" /></svg>
-    </button>
-    <button id="lightbox-prev" class="lightbox-icon lightbox-prev" type="button" aria-label="Previous image">
-      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M14 6l-6 6 6 6" /></svg>
-    </button>
-    <button id="lightbox-next" class="lightbox-icon lightbox-next" type="button" aria-label="Next image">
-      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M10 6l6 6-6 6" /></svg>
-    </button>
   </div>
+</header>
+<main id="main">
+  <section class="page-head">
+    <div class="wrap">
+      <p class="kicker">Achievements</p>
+      <h1 class="display h1">The record</h1>
+      <p class="lede">Podiums, honest transformations and the community events that keep the floor alive.</p>
+    </div>
+  </section>
 
-  <!-- =============== SHARED FOOTER (identical on every page) ===============
-       Static fallback text mirrors js/main.js SITE_CONFIG; main.js
-       refreshes these values from the config on every page load.
-       =================================================================== -->
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <div class="footer-col-brand">
-        <!-- PLACEHOLDER: gym blurb -->
-        <p class="footer-name" data-config="name">Mr Thunder Gym</p>
-        <p class="footer-tagline" data-config="tagline">Train loud. Lift stronger.</p>
-        <ul class="social-row" data-social-links aria-label="Social media">
-          <!-- Placeholder links rendered by js/main.js from SITE_CONFIG -->
-        </ul>
+  <section class="section" aria-labelledby="num-title">
+    <div class="wrap">
+      <h2 class="sr-only" id="num-title">In numbers</h2>
+      <dl class="stats">
+        <div><dt>Years open</dt><dd>12+</dd></div>
+        <div><dt>Members</dt><dd>850+</dd></div>
+        <div><dt>Coaches</dt><dd>6</dd></div>
+        <div><dt>Awards</dt><dd>40</dd></div>
+      </dl>
+      <p class="note">Sample figures. The gym's real numbers go here before launch.</p>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="list-title">
+    <div class="wrap">
+      <h2 class="display h2" id="list-title" style="margin-bottom:1.5rem">Every win</h2>
+      <div class="filters" role="group" aria-label="Filter" data-filter="#wins" data-status="#wins-status">
+        <button class="chip" type="button" data-value="all" aria-pressed="true">All</button>
+        <button class="chip" type="button" data-value="competitions" aria-pressed="false">Competitions</button>
+        <button class="chip" type="button" data-value="transformations" aria-pressed="false">Transformations</button>
+        <button class="chip" type="button" data-value="events" aria-pressed="false">Events</button>
       </div>
-
-      <div class="footer-col-links">
-        <h2 class="footer-head">Quick Links</h2>
-        <ul class="footer-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="facilities.html">Facilities</a></li>
-          <li><a href="achievements.html">Achievements</a></li>
-          <li><a href="booking.html">Book a Session</a></li>
-          <li><a href="about.html">About Us</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-col-contact">
-        <h2 class="footer-head">Contact</h2>
-        <address class="footer-addr pre-line" data-config="address">12, Annaikarai Street, Near Bus Stand,
-Virudhunagar, Tamil Nadu 626001</address>
-        <p><a class="footer-link" data-config="phone" href="tel:9876543210">98765 43210</a></p>
-        <p><a class="footer-link" data-config="email" href="mailto:info@mrthundergym.in">info@mrthundergym.in</a></p>
-      </div>
-
-      <div class="footer-col-hours">
-        <h2 class="footer-head">Working Hours</h2>
-        <p class="footer-hours pre-line">Mon-Sat: 5:00 AM to 9:30 AM &amp; 5:00 PM to 9:00 PM.
-Sunday: 6:00 AM to 9:00 AM.</p>
+      <p class="filter-status" id="wins-status" role="status" aria-live="polite"></p>
+      <ul class="wins" id="wins" role="list">
+        <li class="win" data-tags="competitions">
+          <button class="win-btn" type="button" aria-label="Enlarge: District Championship: 3 gold medals"><img src="assets/images/achievement-competition-1.svg" alt="Team on the district championship podium (sample image)" width="800" height="600" loading="lazy"></button>
+          <p class="win-meta"><span>Competitions</span><span>2024</span></p>
+          <h3 class="display">District Championship: 3 gold medals</h3>
+          <p>Team Thunder swept the podium at the district bodybuilding championship.</p>
+        </li>
+        <li class="win" data-tags="competitions">
+          <button class="win-btn" type="button" aria-label="Enlarge: State powerlifting meet"><img src="assets/images/achievement-competition-2.svg" alt="Powerlifter mid-lift at the state meet (sample image)" width="800" height="600" loading="lazy"></button>
+          <p class="win-meta"><span>Competitions</span><span>2023</span></p>
+          <h3 class="display">State powerlifting meet</h3>
+          <p>Two lifters qualified for the state-level powerlifting finals.</p>
+        </li>
+        <li class="win" data-tags="competitions">
+          <button class="win-btn" type="button" aria-label="Enlarge: Inter-gym strength challenge"><img src="assets/images/achievement-competition-3.svg" alt="Winners holding trophies (sample image)" width="800" height="600" loading="lazy"></button>
+          <p class="win-meta"><span>Competitions</span><span>2023</span></p>
+          <h3 class="display">Inter-gym strength challenge</h3>
+          <p>Winners of the first inter-gym strength challenge in Virudhunagar.</p>
+        </li>
+        <li class="win" data-tags="competitions">
+          <button class="win-btn" type="button" aria-label="Enlarge: Best physique award"><img src="assets/images/achievement-competition-4.svg" alt="Member posing at a physique competition (sample image)" width="800" height="600" loading="lazy"></button>
+          <p class="win-meta"><span>Competitions</span><span>2022</span></p>
+          <h3 class="display">Best physique award</h3>
+          <p>A member took best physique at a regional open event.</p>
+        </li>
+        <li class="win" data-tags="transformations">
+          <button class="win-btn" type="button" aria-label="Enlarge: Mr Ramanathan, 18 kg down"><img src="assets/images/achievement-transformation-1.svg" alt="Member before and after a weight-loss transformation (sample image)" width="800" height="600" loading="lazy"></button>
+          <p class="win-meta"><span>Transformation</span><span>2024</span></p>
+          <h3 class="display">Mr Ramanathan, 18 kg down</h3>
+          <p>Twelve months of supervised training and diet coaching.</p>
+        </li>
+        <li class="win" data-tags="transformations">
+          <button class="win-btn" type="button" aria-label="Enlarge: Ms Divya, 0 to 10 pull-ups"><img src="assets/images/achievement-transformation-2.svg" alt="Member doing pull-ups (sample image)" width="800" height="600" loading="lazy"></button>
+          <p class="win-meta"><span>Transformation</span><span>2024</span></p>
+          <h3 class="display">Ms Divya, 0 to 10 pull-ups</h3>
+          <p>From zero pull-ups to ten clean reps.</p>
+        </li>
+        <li class="win" data-tags="transformations">
+          <button class="win-btn" type="button" aria-label="Enlarge: Mr Karthik, 10 kg lean bulk"><img src="assets/images/achievement-transformation-3.svg" alt="Member flexing after a lean bulk (sample image)" width="800" height="600" loading="lazy"></button>
+          <p class="win-meta"><span>Transformation</span><span>2023</span></p>
+          <h3 class="display">Mr Karthik, 10 kg lean bulk</h3>
+          <p>A structured bulk with personal training and meal plans.</p>
+        </li>
+        <li class="win" data-tags="events">
+          <button class="win-btn" type="button" aria-label="Enlarge: Fitness awareness camp"><img src="assets/images/achievement-event-1.svg" alt="Crowd at the fitness awareness camp (sample image)" width="800" height="600" loading="lazy"></button>
+          <p class="win-meta"><span>Event</span><span>2024</span></p>
+          <h3 class="display">Fitness awareness camp</h3>
+          <p>Free fitness screening for the Virudhunagar community.</p>
+        </li>
+        <li class="win" data-tags="events">
+          <button class="win-btn" type="button" aria-label="Enlarge: Marathon prep workshop"><img src="assets/images/achievement-event-2.svg" alt="Coach demonstrating running drills (sample image)" width="800" height="600" loading="lazy"></button>
+          <p class="win-meta"><span>Event</span><span>2023</span></p>
+          <h3 class="display">Marathon prep workshop</h3>
+          <p>Running form and injury prevention for members.</p>
+        </li>
+      </ul>
+      <p class="note">Sample stories and images until members approve their own.</p>
+    </div>
+  </section>
+  <section class="band on-night cta" aria-labelledby="cta-title">
+    <div class="wrap" data-reveal>
+      <p class="kicker">Your first session</p>
+      <h2 class="display h1" id="cta-title">Your name<br><em>goes here next.</em></h2>
+      <p class="lede">Every story on this page started with a first session. Yours is free.</p>
+      <div class="btn-row" style="margin-top:2rem">
+        <a class="btn" href="booking.html">Book a free trial</a>
+        <a class="btn btn-line" href="https://wa.me/919876543210" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3a.5.5 0 0 0 0-.4l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .1-1.3c0-.1-.2-.2-.5-.3Z"/></svg> WhatsApp us</a>
       </div>
     </div>
+  </section>
 
-    <div class="footer-bottom">
-      <div class="container">
-        <p>&copy; <span id="footer-year"></span> Mr Thunder Gym, Virudhunagar.</p>
-        <!-- CREDITS: found pictures are shared across pages. Keep
-             in step with assets/images/found/credits.json. -->
-        <p class="credits">Pictures: <a href="https://commons.wikimedia.org/wiki/File:Olympic_barbell.jpg">“Olympic barbell”</a> by Tomáš Pilík, <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a>, via Wikimedia Commons; <a href="https://commons.wikimedia.org/wiki/File:Dumbbells_on_rack_20180112.jpg">“Dumbbells on rack”</a> by Santeri Viinamäki, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a>, via Wikimedia Commons; <a href="https://commons.wikimedia.org/wiki/File:Kettlebell_truebalance_romeike.jpg">“Kettlebell truebalance”</a> by Detlef Romeike, <a href="https://creativecommons.org/licenses/by-sa/2.5">CC BY-SA 2.5</a>, via Wikimedia Commons; <a href="https://commons.wikimedia.org/wiki/File:%22A_New_Sandow_Pose_(VIII)%22,_Eugen_Sandow_Wellcome_L0035270_-_restoration.jpg">“Eugen Sandow, 1902”</a> restored by Adam Cuerden, <a href="https://creativecommons.org/publicdomain/mark/1.0/">public domain</a>, via Wikimedia Commons.</p>
-
+  <dialog class="lightbox" id="lightbox" aria-labelledby="lb-title">
+    <div class="lightbox-inner">
+      <div class="lightbox-bar">
+        <div style="display:flex;gap:.5rem">
+          <button class="icon-btn" type="button" data-lb-prev aria-label="Previous">&larr;</button>
+          <button class="icon-btn" type="button" data-lb-next aria-label="Next">&rarr;</button>
+        </div>
+        <button class="icon-btn" type="button" data-lb-close>Close</button>
+      </div>
+      <img src="" alt="">
+      <div class="lightbox-body">
+        <p class="kicker" data-lb-meta></p>
+        <h2 id="lb-title"></h2>
+        <p class="muted" data-lb-text></p>
       </div>
     </div>
-  </footer>
+  </dialog>
+</main>
+<footer class="site-footer on-night">
+  <div class="wrap">
+    <p class="footer-mast" aria-hidden="true">Train loud.<br><span>Lift stronger.</span></p>
+    <div class="footer-grid">
+      <div>
+        <h2>Find us</h2>
+        <address>Mr Thunder Gym<br>12, Annaikarai Street, Near Bus Stand,<br>Virudhunagar, Tamil Nadu 626001</address>
+        <a class="link-arrow" href="https://www.google.com/maps/search/?api=1&amp;query=Annaikarai+Street+Bus+Stand+Virudhunagar+626001" target="_blank" rel="noopener">Open in Maps <span aria-hidden="true">&rarr;</span></a>
+      </div>
+      <div>
+        <h2>Hours</h2>
+        <p>Mon–Sat<br>5:00–9:30 AM &amp; 5:00–9:00 PM</p>
+        <p style="margin-top:.5rem">Sunday<br>6:00–9:00 AM</p>
+      </div>
+      <div>
+        <h2>Contact</h2>
+        <ul role="list">
+          <li><a href="tel:+919876543210">98765 43210</a></li>
+          <li><a href="mailto:info@mrthundergym.in">info@mrthundergym.in</a></li>
+          <li><a href="https://wa.me/919876543210" target="_blank" rel="noopener">WhatsApp the desk</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Pages</h2>
+        <ul role="list">
+          <li><a href="index.html">Home</a></li><li><a href="facilities.html">Facilities</a></li><li><a href="achievements.html">Achievements</a></li><li><a href="about.html">About</a></li><li><a href="booking.html">Booking</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-base">
+      <p>&copy; <span data-year>2026</span> Mr Thunder Gym, Virudhunagar.</p>
+      <p class="credits">Photos via Wikimedia Commons: “Olympic barbell” by Tomáš Pilík, <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a>; “Dumbbells on rack” by Santeri Viinamäki, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a>; “Kettlebell truebalance” by Detlef Romeike, <a href="https://creativecommons.org/licenses/by-sa/2.5">CC BY-SA 2.5</a>; “A New Sandow Pose (VIII)”, 1902, public domain. Greyscale treatment applied.</p>
+    </div>
+  </div>
+</footer>
 </body>
 </html>
