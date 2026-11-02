@@ -32,6 +32,7 @@
     revealSelector: [
       '.section-head',
       '.page-head',
+      '.lead-open',
       '.bento > *',
       '.rows > li',
       '.showcase > *',
@@ -45,9 +46,16 @@
       '.cards-grid > *',
       '.stats > *',
       '.band-inner',
+      '.iron-grid > *',
+      '.field',
+      '.form-actions',
+      '.facts > *',
+      '.note',
+      '.band-copy',
+      '.band-number',
     ].join(', '),
-    // Never reveal anything inside these (forms, modal states, chrome).
-    skipSelector: '.site-header, .site-footer, .hero, .booking-form, #booking-success',
+    // Never reveal anything inside these (modal states, chrome).
+    skipSelector: '.site-header, .site-footer, .hero, #booking-success',
     // Count-up target class (text read from the markup itself).
     statSelector: '.stat-value',
     staggerMs: 80,   // per-element delay inside one intersection batch

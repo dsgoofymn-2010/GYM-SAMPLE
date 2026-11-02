@@ -36,6 +36,7 @@
   <script src="js/main.js" defer></script>
   <script src="js/achievements.js" defer></script>
   <script src="js/motion.js" defer></script>
+   <script type="module" src="js/three-scene.js"></script>
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to main content</a>
@@ -73,11 +74,13 @@
         <header class="page-head">
           <h1>Achievements</h1>
           <!-- PLACEHOLDER: intro copy -->
-          <p class="section-lead">
-            Moments we are proud of: podiums, member journeys and community
-            events from the Thunder family.
-          </p>
         </header>
+
+        <p class="lead-open">
+          A hall of record from the Thunder family in Virudhunagar:
+          podium finishes, honest member transformations and the community
+          evenings that keep the floor alive.
+        </p>
 
         <!-- =============== STATS STRIP (PLACEHOLDER NUMBERS) =============== -->
         <div class="stats" aria-label="Gym statistics (sample values)">
@@ -119,6 +122,53 @@
         </div>
       </div>
     </section>
+    <!-- =============== THE IRON: found world-photos (credited) ===============
+         Real pictures of the trade from Wikimedia Commons. They show the
+         gym's world, not the gym's own floor; the client's photographs
+         replace the bento slots above. Credits live in the footer. -->
+    <section class="section" id="the-iron" aria-labelledby="iron-title">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="iron-title">Iron and Chalk</h2>
+          <p class="section-lead">The trade in close-up: the tools on the floor and where they began.</p>
+        </div>
+
+        <ul class="iron-grid">
+          <li class="iron-a">
+            <figure class="tile-frame">
+              <img src="assets/images/found/olympic-barbell.jpg"
+                alt="Olympic barbell loaded with training plates" width="1920" height="1043" loading="lazy" />
+              <figcaption class="tile-cap">Olympic barbell, the trade's spine</figcaption>
+            </figure>
+          </li>
+
+          <li class="iron-b">
+            <figure class="tile-frame">
+              <img src="assets/images/found/dumbbells-on-rack-20180112.jpg"
+                alt="Dumbbells lined on a rack from the light end to the heavy end" width="1920" height="1080" loading="lazy" />
+              <figcaption class="tile-cap">A rack waiting for its next set</figcaption>
+            </figure>
+          </li>
+
+          <li class="iron-c">
+            <figure class="tile-frame">
+              <img src="assets/images/found/a-new-sandow-pose-viii.jpg"
+                alt="Eugen Sandow posing in leopard-skin trunks, 1902 photograph" width="1920" height="2975" loading="lazy" />
+              <figcaption class="tile-cap">Eugen Sandow, 1902: the trade as it began</figcaption>
+            </figure>
+          </li>
+
+          <li class="iron-d">
+            <figure class="tile-frame">
+              <img src="assets/images/found/kettlebell-truebalance-romeike.jpg"
+                alt="A single kettlebell on a mat" width="1920" height="1280" loading="lazy" />
+              <figcaption class="tile-cap">One bell, a hundred drills</figcaption>
+            </figure>
+          </li>
+        </ul>
+      </div>
+    </section>
+
   </main>
 
   <!-- =============== LIGHTBOX (opened by js/achievements.js) =============== -->
@@ -185,6 +235,10 @@ Sunday: 6:00 AM to 9:00 AM.</p>
     <div class="footer-bottom">
       <div class="container">
         <p>&copy; <span id="footer-year"></span> Mr Thunder Gym, Virudhunagar.</p>
+        <!-- CREDITS: found pictures are shared across pages. Keep
+             in step with assets/images/found/credits.json. -->
+        <p class="credits">Pictures: <a href="https://commons.wikimedia.org/wiki/File:Olympic_barbell.jpg">“Olympic barbell”</a> by Tomáš Pilík, <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a>, via Wikimedia Commons; <a href="https://commons.wikimedia.org/wiki/File:Dumbbells_on_rack_20180112.jpg">“Dumbbells on rack”</a> by Santeri Viinamäki, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a>, via Wikimedia Commons; <a href="https://commons.wikimedia.org/wiki/File:Kettlebell_truebalance_romeike.jpg">“Kettlebell truebalance”</a> by Detlef Romeike, <a href="https://creativecommons.org/licenses/by-sa/2.5">CC BY-SA 2.5</a>, via Wikimedia Commons; <a href="https://commons.wikimedia.org/wiki/File:%22A_New_Sandow_Pose_(VIII)%22,_Eugen_Sandow_Wellcome_L0035270_-_restoration.jpg">“Eugen Sandow, 1902”</a> restored by Adam Cuerden, <a href="https://creativecommons.org/publicdomain/mark/1.0/">public domain</a>, via Wikimedia Commons.</p>
+
       </div>
     </div>
   </footer>

@@ -59,6 +59,24 @@
   --color-success: oklch(0.78 0.12 150);
   --color-overlay: oklch(0.1 0.012 96 / 0.8); /* scrims only */
 
+  /* ---- Glass (user-pinned glassmorphism layer) ----
+     Translucent surfaces over the 3D scene; blur count and alpha are
+     one decision each so panels read as one material everywhere. */
+  --glass-alpha: 0.62;
+  --glass-blur: 18px;
+  --glass-saturate: 1.25;
+  --glass-bg: color-mix(in oklab,
+    var(--color-paper-2) calc(var(--glass-alpha) * 100%), transparent);
+  --glass-bg-hi: color-mix(in oklab,
+    var(--color-paper-3) calc(var(--glass-alpha) * 100%), transparent);
+  --glass-edge: color-mix(in oklab, var(--color-accent) 22%, transparent);
+  --glass-inner: inset 0 1px 0 color-mix(in oklab, var(--color-ink) 12%, transparent);
+  --filter-glass: blur(var(--glass-blur)) saturate(var(--glass-saturate));
+
+  /* ---- 3D scene ---- */
+  --scene-accent: var(--color-accent);
+  --scene-ground: oklch(0.09 0.01 96);
+
   /* ---- Faces ---- */
   --font-display: "Fjalla One", "Arial Narrow", "Impact", sans-serif;
   --font-body: "Archivo", "Segoe UI", system-ui, sans-serif;
@@ -75,6 +93,6 @@
 }
 
 @media (max-width: 40rem) {
-  :root { --gutter: 16px; --section-gap-s: 56px; --section-gap: 72px;
+  :root { --gutter: 16px; --section-gap-s: 112px; --section-gap: 72px;
           --section-gap-l: 96px; --gap-columns: 16px; --header-h: 64px; }
 }

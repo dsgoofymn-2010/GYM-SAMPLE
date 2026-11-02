@@ -37,11 +37,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600&amp;family=Fjalla+One&amp;display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
   <script src="js/main.js" defer></script>
-  <!-- Storm intro (index.html only): self-contained Canvas 2D, injects its
-       own styles, no dependencies, and always removes itself. Tweak the
-       CONFIG at the top of js/intro.js; "?intro" on the URL forces replay. -->
-  <script src="js/intro.js" defer></script>
   <script src="js/motion.js" defer></script>
+   <script type="module" src="js/three-scene.js"></script>
   <!-- TODO LAUNCH: JSON-LD values mirror js/main.js SITE_CONFIG; phone,
        email and url are PLACEHOLDERS until the gym confirms real data. -->
   <script type="application/ld+json">
@@ -113,13 +110,19 @@
           <h1 id="hero-title" class="hero-head">Open at five. Loud by six.</h1>
           <!-- PLACEHOLDER: hero copy -->
           <p class="hero-lead">
-            Strength training, group classes and diet coaching, all under one
-            roof in Virudhunagar.
+            Strength racks, coached batches and diet plans built around you —
+            all under one roof.
           </p>
           <div class="hero-actions">
-            <a class="btn" href="booking.html">Book a Session</a>
+            <a class="btn" href="booking.html">Book Your Free Trial</a>
             <a class="btn btn-ghost" href="facilities.html">Explore Facilities</a>
           </div>
+          <!-- PLACEHOLDER: hero facts copy -->
+          <ul class="hero-facts" aria-label="Quick facts">
+            <li>Free trial for first-timers</li>
+            <li>Mon–Sat, two sessions daily</li>
+            <li>Near the bus stand</li>
+          </ul>
         </div>
 
         <div class="hero-panel">
@@ -141,7 +144,8 @@
           </div>
           <h2 id="facilities-preview-title">Inside the Gym</h2>
           <!-- PLACEHOLDER: preview copy -->
-          <p class="section-lead">A quick look at the floor. See the full list on the Facilities page.</p>
+          <p class="section-lead">A quick look at the floor.
+            <a class="link-more" href="facilities.html">See All Facilities</a></p>
         </div>
 
         <div class="bento">
@@ -181,7 +185,7 @@
             <!-- PLACEHOLDER: schedule note -->
             <p class="tile-place">Two sessions daily.</p>
             <div class="tile-cta">
-              <a class="btn" href="booking.html">Book a Session</a>
+              <a class="btn" href="booking.html">Book Your Free Trial</a>
             </div>
           </div>
 
@@ -201,8 +205,6 @@
             <p class="tile-cap">Functional turf</p>
           </div>
         </div>
-
-        <a class="link-more" href="facilities.html">See All Facilities</a>
       </div>
     </section>
 
@@ -244,13 +246,61 @@
       </div>
     </section>
 
+    <!-- =============== THE IRON: found world-photos (credited) ===============
+         Real pictures of the trade from Wikimedia Commons. They show the
+         gym's world, not the gym's own floor; the client's photographs
+         replace the bento slots above. Credits live in the footer. -->
+    <section class="section" id="the-iron" aria-labelledby="iron-title">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="iron-title">Iron and Chalk</h2>
+          <p class="section-lead">The trade in close-up: the tools on the floor and where they began.</p>
+        </div>
+
+        <ul class="iron-grid">
+          <li class="iron-a">
+            <figure class="tile-frame">
+              <img src="assets/images/found/olympic-barbell.jpg"
+                alt="Olympic barbell loaded with training plates" width="1920" height="1043" loading="lazy" />
+              <figcaption class="tile-cap">Olympic barbell, the trade's spine</figcaption>
+            </figure>
+          </li>
+
+          <li class="iron-b">
+            <figure class="tile-frame">
+              <img src="assets/images/found/dumbbells-on-rack-20180112.jpg"
+                alt="Dumbbells lined on a rack from the light end to the heavy end" width="1920" height="1080" loading="lazy" />
+              <figcaption class="tile-cap">A rack waiting for its next set</figcaption>
+            </figure>
+          </li>
+
+          <li class="iron-c">
+            <figure class="tile-frame">
+              <img src="assets/images/found/a-new-sandow-pose-viii.jpg"
+                alt="Eugen Sandow posing in leopard-skin trunks, 1902 photograph" width="1920" height="2975" loading="lazy" />
+              <figcaption class="tile-cap">Eugen Sandow, 1902: the trade as it began</figcaption>
+            </figure>
+          </li>
+
+          <li class="iron-d">
+            <figure class="tile-frame">
+              <img src="assets/images/found/kettlebell-truebalance-romeike.jpg"
+                alt="A single kettlebell on a mat" width="1920" height="1280" loading="lazy" />
+              <figcaption class="tile-cap">One bell, a hundred drills</figcaption>
+            </figure>
+          </li>
+        </ul>
+      </div>
+    </section>
+
     <!-- =============== SHOWCASE: ACHIEVEMENTS PREVIEW =============== -->
     <section class="section" id="achievements-preview" aria-labelledby="achievements-preview-title">
       <div class="container">
         <div class="section-head">
           <h2 id="achievements-preview-title">Our Achievements</h2>
           <!-- PLACEHOLDER: preview copy -->
-          <p class="section-lead">Podiums, transformations and community events from our members.</p>
+          <p class="section-lead">Podiums, transformations and community events from our members.
+            <a class="link-more" href="achievements.html">All Achievements</a></p>
         </div>
 
         <div class="showcase">
@@ -278,36 +328,43 @@
             <p class="tile-cap">Events &amp; camps for the whole community</p>
           </div>
         </div>
-
-        <a class="link-more" href="achievements.html">All Achievements</a>
       </div>
     </section>
 
     <!-- =============== STATEMENT: ABOUT TEASER =============== -->
     <section class="section" id="about-teaser" aria-labelledby="teaser-title">
       <div class="container">
-        <h2 id="teaser-title" class="statement-text">Built for real progress</h2>
-        <!-- PLACEHOLDER: teaser copy -->
-        <p class="statement-support">Mr Thunder Gym: serious equipment, friendly coaches and a
-          community that shows up, near the Virudhunagar bus stand.</p>
-        <p class="statement-support">Whether you are starting from scratch or chasing a personal
-          best, there is a plan here for you.</p>
-        <a class="link-more" href="about.html">More About Us</a>
+        <div class="statement-grid">
+          <div class="statement-copy">
+            <h2 id="teaser-title" class="statement-text">Built for <strong>real</strong> progress</h2>
+          </div>
+          <div class="statement-side">
+            <!-- PLACEHOLDER: teaser copy -->
+            <p class="statement-support">Mr Thunder Gym: serious equipment, friendly coaches and a
+              community that shows up, near the Virudhunagar bus stand.</p>
+            <p class="statement-support">Whether you are starting from scratch or chasing a personal
+              best, there is a plan here for you.</p>
+            <a class="link-more" href="about.html">More About Us</a>
+          </div>
+        </div>
       </div>
     </section>
 
     <!-- =============== BAND: FINAL CTA =============== -->
     <section class="band" aria-labelledby="cta-title">
       <div class="container band-inner">
-        <div>
+        <div class="band-copy">
           <h2 id="cta-title">The Floor Is Open</h2>
           <!-- PLACEHOLDER: CTA copy -->
           <p>Walk in for a free trial, or reserve your first session online.</p>
         </div>
-        <a class="btn" href="booking.html">Book a Session</a>
+        <a class="btn" href="booking.html">Book Your Free Trial</a>
+        <a class="band-number" data-config="phone" href="tel:9876543210">
+          98765 43210
+          <span class="band-number-label">Ring the desk</span>
+        </a>
       </div>
-    </section>
-  </main>
+    </section>  </main>
 
   <!-- =============== SHARED FOOTER (identical on every page) ===============
        Static fallback text mirrors js/main.js SITE_CONFIG; main.js
@@ -353,6 +410,9 @@ Sunday: 6:00 AM to 9:00 AM.</p>
     <div class="footer-bottom">
       <div class="container">
         <p>&copy; <span id="footer-year"></span> Mr Thunder Gym, Virudhunagar.</p>
+        <!-- CREDITS: found pictures are shared across pages. Keep
+             in step with assets/images/found/credits.json. -->
+        <p class="credits">Pictures: <a href="https://commons.wikimedia.org/wiki/File:Olympic_barbell.jpg">“Olympic barbell”</a> by Tomáš Pilík, <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a>, via Wikimedia Commons; <a href="https://commons.wikimedia.org/wiki/File:Dumbbells_on_rack_20180112.jpg">“Dumbbells on rack”</a> by Santeri Viinamäki, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a>, via Wikimedia Commons; <a href="https://commons.wikimedia.org/wiki/File:Kettlebell_truebalance_romeike.jpg">“Kettlebell truebalance”</a> by Detlef Romeike, <a href="https://creativecommons.org/licenses/by-sa/2.5">CC BY-SA 2.5</a>, via Wikimedia Commons; <a href="https://commons.wikimedia.org/wiki/File:%22A_New_Sandow_Pose_(VIII)%22,_Eugen_Sandow_Wellcome_L0035270_-_restoration.jpg">“Eugen Sandow, 1902”</a> restored by Adam Cuerden, <a href="https://creativecommons.org/publicdomain/mark/1.0/">public domain</a>, via Wikimedia Commons.</p>
       </div>
     </div>
   </footer>
